@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+/* CSS全称セレクタ */
+body {
+  margin: 0;
+}
+/* デフォルト余白除去 */
+.hero {
+  position: relative; /* この要素自身を基準位置として扱えるようにする */
+  height: 100vh; /* ブラウザを開いたときの１画面分高さ */
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+}
+/* 画像を入れてる箱のサイズ */
+.hero-img img {
+  width: 100%; /* 箱の中の画像のサイズ */
+  height: 100%;
+  object-fit: cover; /* 画像の比率を崩さず、箱いっぱいに敷き詰める */
+}
+.hero-content {
+  position: absolute; /* 親の.heroを基準に、好きな場所へ配置できるようにする */
+  top: 50%;
+  left: 50%; /*親の中央に配置 */
+  transform: translate(-50%, -50%);
+  /* 自分の中心を親の中心に合わせる */
+}
