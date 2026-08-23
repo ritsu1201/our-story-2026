@@ -22,8 +22,36 @@ body {
 }
 .hero-content {
   position: absolute; /* 親の.heroを基準に、好きな場所へ配置できるようにする */
-  top: 50%;
-  left: 50%; /*親の中央に配置 */
+  top: 80%;
+  left: 65%; /*親の中央に配置 */
   transform: translate(-50%, -50%);
   /* 自分の中心を親の中心に合わせる */
+  width: 60%;
+}
+.hero-content h1 {
+  font-size: 50px;
+  margin: 0;
+  letter-spacing: 6px; /* 文字と文字の間隔 */
+}
+.hero-content .date {
+  margin: 16px 0 0;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+.hero-content button {
+  margin-top: 10px;
+  padding: 12px 30px;
+  background: transparent; /* 背景を透明に */
+  border: 1px solid black;
+  letter-spacing: 4px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.hero-content button:hover {
+  transform: translateY(-2px);
+  color: aliceblue;
+  background-color: black;
 }
