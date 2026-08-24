@@ -1,0 +1,11 @@
+.memory {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+.photo img {
+  width: 100%;
+}
+.photo {
+  position: relative;
+}
