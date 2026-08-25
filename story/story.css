@@ -1,11 +1,41 @@
+body {
+  background-color: rgb(251, 249, 249);
+  color: rgb(10, 10, 10);
+  font-family: "Shippori Mincho", serif;
+}
 .memory {
   max-width: 900px;
   width: 90%;
   margin: 0 auto;
+}
+.memory h2 {
+  letter-spacing: 6px;
+}
+.date {
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
 }
 .photo img {
   width: 100%;
 }
 .photo {
   position: relative;
+}
+.photo-date {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.location {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  font-family: sans-serif;
+}
+.memory-text {
+  text-align: center;
 }
