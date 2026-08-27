@@ -49,3 +49,26 @@ body {
   border: 1px solid black;
   padding: 5px;
 }
+.profile-card {
+  border: 1px solid black;
+  padding: 5px;
+  height: 400px;
+  margin-bottom: 10px;
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.ritsu {
+  width: 100%;
+}
+.sara {
+  width: 100%;
+  transform: translateY(-20px) scale(1.6);
+  object-fit: cover;
+}
