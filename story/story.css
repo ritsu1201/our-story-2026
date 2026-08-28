@@ -3,6 +3,12 @@ body {
   color: rgb(10, 10, 10);
   font-family: "Shippori Mincho", serif;
 }
+.zoom {
+  transition: all 0.3s ease;
+}
+.zoom:hover {
+  transform: scale(1.05);
+}
 .memory {
   max-width: 900px;
   width: 90%;
@@ -22,6 +28,7 @@ body {
 }
 .photo {
   position: relative;
+  margin-bottom: 30px;
 }
 .photo-date {
   position: absolute;
@@ -48,12 +55,13 @@ body {
 .memory-card {
   border: 1px solid black;
   padding: 5px;
+  margin-bottom: 30px;
 }
 .profile-card {
   border: 1px solid black;
   padding: 5px;
   height: 400px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .profile-img {
   width: 150px;
@@ -71,4 +79,42 @@ body {
   width: 100%;
   transform: translateY(-20px) scale(1.6);
   object-fit: cover;
+}
+.card-4 img {
+  width: 70%;
+  height: 250px;
+}
+.card-4 {
+  position: relative;
+  height: 400px;
+}
+.card-4 .card-date {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+}
+.card-5 img {
+  height: 450px;
+}
+.card-5 {
+  position: relative;
+}
+.info-overlay {
+  position: absolute;
+  top: 120px;
+  right: 70px;
+  background-color: rgba(67, 72, 72, 0.955);
+  color: aliceblue;
+  width: 160px;
+  height: 250px;
+  transition: all 0.3s ease;
+  opacity: 1;
+  border-radius: 14px;
+  text-align: center;
+  transform: translateY(5px);
+  opacity: 0;
+}
+.card-5:hover .info-overlay {
+  transform: translateY(0);
+  opacity: 1;
 }
