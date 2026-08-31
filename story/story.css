@@ -14,7 +14,14 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+.memory h1 {
+  text-align: center;
+  font-size: 35px;
+  text-shadow: 4px 6px 4px rgba(0, 0, 0, 0.3);
+}
 .memory h2 {
+  text-align: center;
+  font-size: 20px;
   letter-spacing: 6px;
 }
 .date {
@@ -23,28 +30,39 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
 }
+.card-1 {
+  border: 1px solid white;
+  background-color: rgb(188, 187, 186);
+  height: 430px;
+  margin-top: 180px;
+  margin-left: 0px;
+  position: relative;
+}
 .photo img {
   width: 100%;
-}
-.photo {
-  position: relative;
-  margin-bottom: 30px;
+  display: block;
+  position: absolute;
+  top: -80px;
+  left: -20px;
 }
 .photo-date {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+  text-align: right;
+  margin-right: 40px;
   font-size: 18px;
   font-family: sans-serif;
 }
 .location {
-  position: absolute;
-  bottom: 50px;
-  left: 20px;
+  text-align: right;
+  margin-right: 20px;
+  letter-spacing: 2px;
   font-family: sans-serif;
 }
 .memory-text {
   text-align: center;
+  word-break: break-word;
+  margin: 0 40px;
+  margin-top: 40px;
+  margin-bottom: 100px;
 }
 .memory-card img {
   width: 100%;

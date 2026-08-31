@@ -1,13 +1,22 @@
 console.log("connect");
 const track = document.querySelector(".hero-track");
+const dots = document.querySelectorAll(".slide-dots span");
+console.log(dots);
 let startX = 0;
 // 指を置いた瞬間のⅹ座標
 let endX = 0;
 // 指を離した瞬間のⅹ座標
 let currentIndex = 0;
 // 現在何枚目か
+dots[currentIndex].textContent = "●";
 function showSlide() {
   track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+function rendedrDots() {
+  dots.forEach((dot) => {
+    dot.textContent = "○";
+  });
+  dots[currentIndex].textContent = "●";
 }
 // currentIndexと画像を接続
 track.addEventListener("touchstart", (e) => {
@@ -21,9 +30,11 @@ track.addEventListener("touchend", (e) => {
       console.log("左スワイプ");
       currentIndex++;
       showSlide();
+      rendedrDots();
     } else {
       currentIndex = 0;
       showSlide();
+      rendedrDots();
     }
   }
   if (endX - startX > 50) {
@@ -31,9 +42,11 @@ track.addEventListener("touchend", (e) => {
     if (currentIndex > 0) {
       currentIndex--;
       showSlide();
+      rendedrDots();
     } else {
       currentIndex = 5;
       showSlide();
+      rendedrDots();
     }
   }
 });
