@@ -119,7 +119,9 @@ body {
   margin-top: 5px;
   margin-bottom: 0;
 }
-.profile-text{margin-top: -12px;}
+.profile-text {
+  margin-top: -12px;
+}
 .profile-like {
   text-align: center;
 }
@@ -145,19 +147,38 @@ body {
 }
 .card-3 .card-text {
   text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
 }
 .card-4 img {
   width: 70%;
   height: 250px;
+  object-fit: cover;
+  object-position: bottom;
 }
 .card-4 {
-  position: relative;
   height: 400px;
 }
+.kirihuri-content {
+  display: flex;
+}
+.kirihuri-info {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .card-4 .card-date {
-  position: absolute;
-  top: 30px;
-  right: 25px;
+  font-size: 14px;
+}
+.kirihuri-location {
+  font-size: 8px;
+  margin-top: -10px;
+  width: 100%;
+  text-align: center;
+}
+.kirihuri-text {
+  font-size: 12px;
 }
 .card-5 img {
   height: 450px;
