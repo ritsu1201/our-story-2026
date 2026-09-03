@@ -315,6 +315,7 @@ body {
   display: flex;
   gap: 13px;
   width: 95%;
+  margin-top: 80px;
 }
 .ritsu-present img {
   height: 150px;
@@ -332,4 +333,68 @@ body {
   font-size: 12px;
   text-align: center;
   justify-content: center;
+  align-items: center;
+}
+.present-text .card-date {
+  font-size: 10px;
+  text-align: center;
+}
+.dousei-card {
+  padding-top: 20px;
+  position: relative;
+}
+.dousei-card img {
+  width: 100%;
+  height: 250px;
+}
+.dousei-card .card-location {
+  position: absolute;
+  top: 35px;
+  background-color: rgb(251, 249, 249);
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+}
+.dousei-card .card-date {
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
+  letter-spacing: 2px;
+  background-color: rgb(251, 249, 249);
+  font-family: sans-serif;
+}
+.cooking-title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 50px 0;
+}
+.cooking-img {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cooking-img img {
+  height: 150px;
+}
+.cooking-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+}
+.year-divider {
+  text-align: center;
+}
+.year-divider p {
+  font-size: 20px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+}
+/* アニメーション */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
 }
