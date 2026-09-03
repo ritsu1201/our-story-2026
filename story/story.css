@@ -286,3 +286,50 @@ body {
   text-align: center;
   transform: translateY(-50px);
 }
+.card-7 img {
+  object-position: center;
+  width: 100%;
+}
+.card-7 .card-date {
+  font-size: 14px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: end;
+  margin-right: 5px;
+}
+.card-7 .card-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: end;
+  margin-top: -15px;
+}
+.card-7 .card-text {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+.card-7 .card-content {
+  display: flex;
+  gap: 13px;
+  width: 95%;
+}
+.ritsu-present img {
+  height: 150px;
+  transform: scale(1.6);
+}
+.ritsu-present {
+  width: 60%;
+  overflow: hidden;
+}
+.present-text {
+  flex-direction: column;
+  align-items: center;
+}
+.present-text .card-text {
+  font-size: 12px;
+  text-align: center;
+  justify-content: center;
+}
