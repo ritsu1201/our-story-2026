@@ -189,3 +189,14 @@ reveals.forEach((reveal) => {
   //   監視員に何を監視するのか指示する
   observer.observe(reveal);
 });
+const images = document.querySelectorAll("img");
+const modalImg = document.querySelector(".modal-img");
+const modal = document.querySelector(".modal");
+// サイト内の全imgに一つずつクリック処理を設定。
+images.forEach((image) => {
+  image.addEventListener("click", (e) => {
+    const touchImg = e.target.src;
+    modalImg.src = touchImg;
+    modal.classList.add("active");
+  });
+});

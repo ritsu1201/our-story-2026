@@ -1,3 +1,20 @@
+.modal {
+  position: fixed;
+  display: none;
+  inset: 0;
+  z-index: 100;
+  background-color: black;
+}
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
 body {
   background-color: rgb(251, 249, 249);
   color: rgb(10, 10, 10);
@@ -390,6 +407,7 @@ body {
   font-size: 18px;
   margin-top: 50px;
 }
+/* 年表示を各年のセクション内だけ追従させる */
 .year-divider {
   text-align: center;
   position: sticky;
