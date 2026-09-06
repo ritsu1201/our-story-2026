@@ -76,3 +76,7 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach((reveal) => {
   observer.observe(reveal);
 });
+const exploreBtn = document.getElementById("explore-btn");
+exploreBtn.addEventListener("click", () => {
+  location.href = "story/story.html";
+});

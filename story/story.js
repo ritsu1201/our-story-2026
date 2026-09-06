@@ -1,7 +1,7 @@
 console.log("connect");
 // スクロールで表示する処理をまとめて取得
 const reveals = document.querySelectorAll(".reveal");
-// 画面内に入った要素を検知して表示アニメーションを実行    
+// 画面内に入った要素を検知して表示アニメーションを実行
 // 監視員を作り、仕事内容を設定
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -13,14 +13,18 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("title")) {
+      } else if (entry.target.classList.contains("head-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 1500);
-      } else if (entry.target.classList.contains("card-1")) {
+      } else if (entry.target.classList.contains("card1-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 800);
+        }, 500);
+      } else if (entry.target.classList.contains("card-1-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1200);
       } else if (entry.target.classList.contains("photo-date")) {
         setTimeout(() => {
           entry.target.classList.add("active");
@@ -33,21 +37,150 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 1800);
-      }
-      else if (entry.target.classList.contains("profile")) {
+      } else if (entry.target.classList.contains("profile")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      }
-      else if (entry.target.classList.contains("ritsu-card")) {
+      } else if (entry.target.classList.contains("ritsu-card")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      }
-      else if (entry.target.classList.contains("sara-card")) {
+      } else if (entry.target.classList.contains("sara-card")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
+      } else if (entry.target.classList.contains("see")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("see-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-date")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("card-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1200);
+      } else if (entry.target.classList.contains("card-text")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1400);
+      } else if (entry.target.classList.contains("kirihuri")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("kirihuri-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("ohira")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("ohira-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("tokyo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("tokyo-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("dousei")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("dousei-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("ritsu-present")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("present-text")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("dousei-card")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("cooking-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("dousei1")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("dousei4")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 900);
+      } else if (entry.target.classList.contains("dousei2")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("dousei3")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1100);
+      } else if (entry.target.classList.contains("cooking-text")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1300);
+      } else if (entry.target.classList.contains("outlet")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("outlet1-text")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("outlet-1")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("outlet2-text")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("outlet-2")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("outlet-text")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1200);
+      } else if (entry.target.classList.contains("outlet-info")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 600);
+      } else if (entry.target.classList.contains("valentine")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("valentine-card")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("valentine-date")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("valentine-text")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1200);
       }
     }
   });
