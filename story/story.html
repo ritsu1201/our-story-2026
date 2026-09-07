@@ -16,10 +16,13 @@
   </head>
   <body>
     <div class="modal">
-      <img
-        alt="クリックされた画像を大きく表示するための要素"
-        class="modal-img"
-      />
+      <div class="modal-content">
+        <img
+          alt="クリックされた画像を大きく表示するための要素"
+          class="modal-img"
+        />
+        <button id="cancel">✖</button>
+      </div>
     </div>
     <main>
       <section class="memory">
@@ -36,11 +39,14 @@
               <div class="card1-title reveal">
                 <p class="title">-はじめての2‐shot-</p>
               </div>
-              <img
-                src="../images/first-img.jpg"
-                alt="付き合ったときの写真"
-                class="card-1-img reveal"
-              />
+              <div class="card1-content">
+                <div class="card1-bg"></div>
+                <img
+                  src="../images/first-img.jpg"
+                  alt="付き合ったときの写真"
+                  class="card-1-img reveal"
+                />
+              </div>
             </div>
             <p class="photo-date reveal">2024. 08. 27</p>
             <p class="location reveal">📍MOKA, TOCHIGI</p>

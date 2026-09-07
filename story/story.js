@@ -200,3 +200,7 @@ images.forEach((image) => {
     modal.classList.add("active");
   });
 });
+const cancel = document.getElementById("cancel");
+cancel.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
