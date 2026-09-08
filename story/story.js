@@ -189,15 +189,23 @@ reveals.forEach((reveal) => {
   //   監視員に何を監視するのか指示する
   observer.observe(reveal);
 });
-const images = document.querySelectorAll("img");
+const images = document.querySelectorAll(".modal-target");
 const modalImg = document.querySelector(".modal-img");
 const modal = document.querySelector(".modal");
+// 現在の画像番号を取得する箱
+let currentIndex = 0;
 // サイト内の全imgに一つずつクリック処理を設定。
 images.forEach((image) => {
   image.addEventListener("click", (e) => {
     const touchImg = e.target.src;
     modalImg.src = touchImg;
     modal.classList.add("active");
+    currentIndex = Array.from(images).indexOf(e.target);
+    console.log("現在のindex:", currentIndex);
+    // もしクリックされた画像が最初の画像なら～
+    if (currentIndex === 0) {
+      before.classList.add("none");
+    }
   });
 });
 const cancel = document.getElementById("cancel");
@@ -208,6 +216,12 @@ modal.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal-img")) {
     return;
   }
+  if (e.target.id === "before") {
+    return;
+  }
+  if (e.target.id === "after") {
+    return;
+  }
   modal.classList.remove("active");
 });
 document.addEventListener("keydown", (e) => {
@@ -215,4 +229,21 @@ document.addEventListener("keydown", (e) => {
     console.log("Escape");
     modal.classList.remove("active");
   }
+});
+const before = document.getElementById("before");
+const after = document.getElementById("after");
+before.addEventListener("click", (e) => {
+  console.log(currentIndex);
+  // beforeボタンを押すときは最初の画像の次の画像であるため、
+  // currentIndexが１の場合でnoneを追加している
+  if (currentIndex === 1) {
+    e.target.classList.add("none");
+  }
+  currentIndex = currentIndex - 1;
+  modalImg.src = images[currentIndex].src;
+});
+after.addEventListener("click", (e) => {
+  console.log(currentIndex);
+  currentIndex = currentIndex + 1;
+  modalImg.src = images[currentIndex].src;
 });

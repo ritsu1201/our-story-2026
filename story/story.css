@@ -27,6 +27,21 @@
   top: 10px;
   right: 10px;
 }
+#before {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+#before.none {
+  display: none;
+}
+#after {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
 body {
   background-color: rgb(251, 249, 249);
   color: rgb(10, 10, 10);
