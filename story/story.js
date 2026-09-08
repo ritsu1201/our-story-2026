@@ -204,3 +204,15 @@ const cancel = document.getElementById("cancel");
 cancel.addEventListener("click", () => {
   modal.classList.remove("active");
 });
+modal.addEventListener("click", (e) => {
+  if (e.target.classList.contains("modal-img")) {
+    return;
+  }
+  modal.classList.remove("active");
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    console.log("Escape");
+    modal.classList.remove("active");
+  }
+});
