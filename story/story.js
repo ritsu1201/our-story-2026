@@ -233,17 +233,51 @@ document.addEventListener("keydown", (e) => {
 const before = document.getElementById("before");
 const after = document.getElementById("after");
 before.addEventListener("click", (e) => {
-  console.log(currentIndex);
+  console.log("boforeボタンを押した瞬間の番号", currentIndex);
   // beforeボタンを押すときは最初の画像の次の画像であるため、
   // currentIndexが１の場合でnoneを追加している
   if (currentIndex === 1) {
     e.target.classList.add("none");
   }
   currentIndex = currentIndex - 1;
+  console.log("戻った画像の番号", currentIndex);
   modalImg.src = images[currentIndex].src;
+  if (currentIndex === 0) {
+    before.disabled = true;
+  }
 });
 after.addEventListener("click", (e) => {
-  console.log(currentIndex);
+  console.log("afterをクリックした瞬間の番号", currentIndex);
+  if (currentIndex === 0) {
+    before.classList.remove("none");
+  }
+  before.disabled = false;
   currentIndex = currentIndex + 1;
+  console.log("進んだ画像の番号", currentIndex);
   modalImg.src = images[currentIndex].src;
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    before.click();
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    after.click();
+  }
+});
+let startX = 0;
+let endX = 0;
+modal.addEventListener("touchstart", (e) => {
+  console.log("タッチ");
+  startX = e.touches[0].clientX;
+});
+modal.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  if (endX - startX > 50) {
+    before.click();
+  }
+  if (startX - endX > 50) {
+    after.click();
+  }
 });
