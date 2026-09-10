@@ -268,17 +268,39 @@ document.addEventListener("keydown", (e) => {
 });
 let startX = 0;
 let endX = 0;
+// 現在のビューポートの横幅を取得
+const screenWidth = window.innerWidth;
 modal.addEventListener("touchstart", (e) => {
   console.log("タッチ");
+  modalImg.style.transition = "none";
   startX = e.touches[0].clientX;
 });
 modal.addEventListener("touchend", (e) => {
+  modalImg.style.transition = "0.3s ease";
   endX = e.changedTouches[0].clientX;
   if (endX - startX > 50) {
-    before.click();
+    // 画像を画面外へ飛ばす
+    modalImg.style.transform = `translateX(${screenWidth}px)`;
+    // そのアニメーションが終わったら
+    modalImg.addEventListener(
+      "transitionend",
+      () => {
+        before.click();
+        modalImg.style.transform = `translateX(0)`;
+      },
+      { once: true },
+    );
   }
   if (startX - endX > 50) {
-    after.click();
+    modalImg.style.transform = `translateX(-${screenWidth}px)`;
+    modalImg.addEventListener(
+      "transitionend",
+      () => {
+        after.click();
+        modalImg.style.transform = `translateX(0)`;
+      },
+      { once: true },
+    );
   }
 });
 modal.addEventListener("touchmove", (e) => {
