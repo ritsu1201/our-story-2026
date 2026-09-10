@@ -281,3 +281,10 @@ modal.addEventListener("touchend", (e) => {
     after.click();
   }
 });
+modal.addEventListener("touchmove", (e) => {
+  const nowX = e.touches[0].clientX;
+  console.log(e.touches[0].clientX);
+  const moveX = nowX - startX;
+  console.log("移動距離：", moveX);
+  modalImg.style.transform = `translateX(${moveX}px)`;
+});
