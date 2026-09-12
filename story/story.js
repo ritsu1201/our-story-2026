@@ -200,17 +200,27 @@ images.forEach((image) => {
     const touchImg = e.target.src;
     modalImg.src = touchImg;
     modal.classList.add("active");
+    // imagesを配列にして触れた画像が何番目なのかを取得
     currentIndex = Array.from(images).indexOf(e.target);
     console.log("現在のindex:", currentIndex);
     // もしクリックされた画像が最初の画像なら～
     if (currentIndex === 0) {
       before.classList.add("none");
+      before.disabled = true;
+    }
+    if (currentIndex === images.length - 1) {
+      after.classList.add("none");
+      after.disabled = true;
     }
   });
 });
 const cancel = document.getElementById("cancel");
 cancel.addEventListener("click", () => {
   modal.classList.remove("active");
+  before.classList.remove("none");
+  after.classList.remove("none");
+  before.disabled = false;
+  after.disabled = false;
 });
 modal.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal-img")) {
@@ -223,21 +233,33 @@ modal.addEventListener("click", (e) => {
     return;
   }
   modal.classList.remove("active");
+  before.classList.remove("none");
+  after.classList.remove("none");
+  before.disabled = false;
+  after.disabled = false;
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     console.log("Escape");
     modal.classList.remove("active");
+    before.classList.remove("none");
+    after.classList.remove("none");
+    before.disabled = false;
+    after.disabled = false;
   }
 });
 const before = document.getElementById("before");
 const after = document.getElementById("after");
 before.addEventListener("click", (e) => {
+  after.disabled = false;
   console.log("boforeボタンを押した瞬間の番号", currentIndex);
   // beforeボタンを押すときは最初の画像の次の画像であるため、
   // currentIndexが１の場合でnoneを追加している
   if (currentIndex === 1) {
     e.target.classList.add("none");
+  }
+  if (currentIndex === images.length - 1) {
+    after.classList.remove("none");
   }
   currentIndex = currentIndex - 1;
   console.log("戻った画像の番号", currentIndex);
@@ -251,10 +273,21 @@ after.addEventListener("click", (e) => {
   if (currentIndex === 0) {
     before.classList.remove("none");
   }
+  if (currentIndex === images.length - 1) {
+    after.disabled = true;
+    after.classList.add("none");
+
+    return;
+  }
   before.disabled = false;
   currentIndex = currentIndex + 1;
   console.log("進んだ画像の番号", currentIndex);
   modalImg.src = images[currentIndex].src;
+  if (currentIndex === images.length - 1) {
+    after.disabled = true;
+    after.classList.add("none");
+    return;
+  }
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") {
@@ -272,26 +305,30 @@ let endX = 0;
 const screenWidth = window.innerWidth;
 modal.addEventListener("touchstart", (e) => {
   console.log("タッチ");
+  // 離した際に滑らかに動くようにした画像がそのままあると
+  // 指の動きに合わせて画像が動く際に0.3sの遅れが出る可能性があるため、削除してる。
   modalImg.style.transition = "none";
   startX = e.touches[0].clientX;
 });
 modal.addEventListener("touchend", (e) => {
+  // 画像が画面外に行って切り替わり戻てくるまでの処理を滑らかに
   modalImg.style.transition = "0.3s ease";
   endX = e.changedTouches[0].clientX;
-  if (endX - startX > 50) {
+  if (endX - startX > 100) {
     // 画像を画面外へ飛ばす
     modalImg.style.transform = `translateX(${screenWidth}px)`;
-    // そのアニメーションが終わったら
+    // そのアニメーション(画面外に行ったら)が終わったら
     modalImg.addEventListener(
       "transitionend",
       () => {
         before.click();
         modalImg.style.transform = `translateX(0)`;
       },
+      // transitionendを一回だけ実行し、
+      // 実行後にリスナーを自動削除して重複実行を防ぐ
       { once: true },
     );
-  }
-  if (startX - endX > 50) {
+  } else if (endX - startX < -100) {
     modalImg.style.transform = `translateX(-${screenWidth}px)`;
     modalImg.addEventListener(
       "transitionend",
@@ -301,9 +338,12 @@ modal.addEventListener("touchend", (e) => {
       },
       { once: true },
     );
+  } else {
+    modalImg.style.transform = `translateX(0)`;
   }
 });
 modal.addEventListener("touchmove", (e) => {
+  // 現在触れているX座標
   const nowX = e.touches[0].clientX;
   console.log(e.touches[0].clientX);
   const moveX = nowX - startX;
