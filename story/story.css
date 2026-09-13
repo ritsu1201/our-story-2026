@@ -92,24 +92,76 @@ img {
 }
 .card1-content {
   position: relative;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
-  border-radius: 12px;
+  padding: 30px 25px;
+  box-sizing: border-box;
+  background-color: #fbfcfb;
+  border-radius: 4px;
   transform: translateY(-70px);
+}
+.card1-photo {
+  position: relative;
+}
+.card1-doodle {
+  position: absolute;
+  top: -100px;
+  right: -150px;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  transform: scale(0.5) rotate(-15deg);
+}
+.card1-doodle.reveal.active {
+  transform: translateY(0) scale(0.5) rotate(-15deg);
+}
+.card1-doodle-2 {
+  position: absolute;
+  bottom: -170px;
+  left: -120px;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  transform: scale(2) rotate(30deg);
+}
+.card1-doodle-2.reveal.active {
+  transform: translateY(0) scale(1) rotate(30deg);
+}
+
+.first-shot-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
 }
 .card-1-img {
   width: 100%;
   display: block;
   position: relative;
   z-index: 1;
+  padding: 20px 10px 50px 10px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
+
 .card1-bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgb(188, 187, 186);
-  top: 15px;
-  left: 15px;
+  background-color: rgb(181, 181, 178);
+  top: 0;
+  left: 0;
   z-index: 0;
   border-radius: 12px;
 }

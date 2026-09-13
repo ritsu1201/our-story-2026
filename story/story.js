@@ -21,7 +21,23 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
+      } else if (entry.target.classList.contains("card1-bg")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card1-doodle")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1400);
+      } else if (entry.target.classList.contains("card1-doodle-2")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1400);
       } else if (entry.target.classList.contains("card-1-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1200);
+      } else if (entry.target.classList.contains("first-shot-caption")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 1200);
