@@ -2,7 +2,7 @@
   position: fixed;
   display: none;
   inset: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: black;
 }
 .modal.active {
@@ -49,7 +49,7 @@ body {
   background-color: rgb(251, 249, 249);
   color: rgb(10, 10, 10);
   font-family: "Shippori Mincho", serif;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
 img {
   border-radius: 12px;
@@ -67,6 +67,85 @@ img {
   padding-bottom: 100px;
   margin-bottom: 100px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+/* メニュボタン */
+.menu-button {
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 200;
+  cursor: pointer;
+  margin-top: auto;
+}
+.menu-button span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.menu-button i {
+  width: 22px;
+  height: 1px;
+  background-color: #333;
+  z-index: 500;
+}
+/* メニュ背景 */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 300;
+}
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* メニュ画面内の調整 */
+.menu-section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.menu-description {
+  text-align: center;
+}
+.story-years {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu-nav {
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+.menu-bottom {
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 52%;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: 0.4s ease;
+  background-color: #faf8f5;
+  z-index: 400;
+  box-sizing: border-box;
+}
+.menu.active {
+  transform: translateX(0);
 }
 .date {
   text-shadow: 2px 3px 5px;
@@ -108,7 +187,7 @@ img {
 .card1-doodle {
   position: absolute;
   top: -100px;
-  right: -150px;
+  right: -130px;
   width: 100%;
   height: 100%;
   z-index: 3;

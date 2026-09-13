@@ -26,12 +26,55 @@
         <button id="after">→</button>
       </div>
     </div>
+    <button class="menu-button reveal">
+      <span>MENU</span>
+      <i></i>
+    </button>
+    <!-- メニューを開いたときの背景 -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <!-- メニュー画面 -->
+    <aside class="menu" id="menu">
+      <nav class="menu-nav">
+        <!-- STORY -->
+        <section class="menu-section">
+          <p class="menu-section-title">STORY</p>
+          <div class="story-years">
+            <a href="#year-2024" class="year-link">2024</a>
+            <a href="#year-2025" class="year-link">2025</a>
+            <a href="#year-2026s" class="year-link">2026</a>
+          </div>
+          <p class="menu-description">- UR YEARS -</p>
+        </section>
+        <!-- FOOD -->
+        <section class="menu-section">
+          <a href="food.html" class="menu-link"> FOOD </a>
+          <p class="menu-description">- ふたりで食べたもの -</p>
+        </section>
+        <!-- DAILY -->
+        <section class="menu-section">
+          <a href="daily.html" class="menu-link"> DAILY </a>
+          <p class="menu-description">- 何気ない日々の写真 -</p>
+        </section>
+        <!-- GIFT -->
+        <section class="menu-section">
+          <a href="gift.html" class="menu-link"> GIFT </a>
+          <p class="menu-description">- ふたりの贈りもの -</p>
+        </section>
+      </nav>
+      <!-- 下部のデザイン -->
+      <div class="menu-bottom">
+        <div class="menu-line"></div>
+        <p>R & S</p>
+        <p class="menu-small">A COLLECTION OF US</p>
+        <p class="menu-symbol">·˚✦ ✦˚·</p>
+      </div>
+    </aside>
     <main>
       <section class="memory">
         <p class="date reveal">2024.08.20</p>
         <h1 class="head-title reveal">THE BEGINNING</h1>
       </section>
-      <section class="year-2024">
+      <section id="year-2024" class="year-2024">
         <div class="year-divider">
           <p>-2024-</p>
         </div>
@@ -55,7 +98,10 @@
                   src="../images/落書き１-3.png"
                   class="card1-doodle reveal"
                 />
-                <img src="../images/落書き２.PNG" class="card1-doodle-2 reveal" />
+                <img
+                  src="../images/落書き２.PNG"
+                  class="card1-doodle-2 reveal"
+                />
               </div>
             </div>
             <p class="photo-date reveal">2024. 08. 27</p>
@@ -268,7 +314,7 @@
           </div>
         </section>
       </section>
-      <section class="year-2025">
+      <section id="year-2025" class="year-2025">
         <div class="year-divider">
           <p>-2025-</p>
         </div>

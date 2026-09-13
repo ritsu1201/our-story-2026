@@ -12,6 +12,10 @@ const observer = new IntersectionObserver((entries) => {
         // それぞれ時間差で表示されるようにする
         setTimeout(() => {
           entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("menu-button")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
         }, 500);
       } else if (entry.target.classList.contains("head-title")) {
         setTimeout(() => {
@@ -365,4 +369,32 @@ modal.addEventListener("touchmove", (e) => {
   const moveX = nowX - startX;
   console.log("移動距離：", moveX);
   modalImg.style.transform = `translateX(${moveX}px)`;
+});
+const menuButton = document.querySelector(".menu-button");
+const menu = document.getElementById("menu");
+const menuOverlay = document.getElementById("menu-overlay");
+const main = document.querySelector("main");
+menuButton.addEventListener("click", () => {
+  menu.classList.add("active");
+  menuOverlay.classList.add("active");
+  main.style.opacity = 0.5;
+});
+menuOverlay.addEventListener("click", () => {
+  menu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+  main.style.opacity = 1;
+});
+const yearLinks = document.querySelectorAll(".year-link");
+yearLinks.forEach((yearLink) => {
+  yearLink.addEventListener("click", (e) => {
+    menu.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    main.style.opacity = 1;
+    // 要素の指定した属性の値を取得する（文字列として返ってくる）
+    const year = e.target.getAttribute("href");
+    console.log(year);
+    if (year === "#year-2024") {
+      scrollIntoView
+    }
+  });
 });
