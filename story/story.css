@@ -49,6 +49,7 @@ body {
   background-color: rgb(251, 249, 249);
   color: rgb(10, 10, 10);
   font-family: "Shippori Mincho", serif;
+   overflow-x: hidden;
 }
 img {
   border-radius: 12px;
@@ -99,6 +100,7 @@ img {
   background-color: #fbfcfb;
   border-radius: 4px;
   transform: translateY(-70px);
+  overflow: hidden;
 }
 .card1-photo {
   position: relative;
