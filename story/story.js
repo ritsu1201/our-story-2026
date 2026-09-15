@@ -384,9 +384,12 @@ menuOverlay.addEventListener("click", () => {
   menuOverlay.classList.remove("active");
   main.style.opacity = 1;
 });
+// .year-linkを持つ要素を全部取得
 const yearLinks = document.querySelectorAll(".year-link");
 yearLinks.forEach((yearLink) => {
   yearLink.addEventListener("click", (e) => {
+    // ブラウザ標準のページ内ジャンプを止め、JSでスクロールを制御する
+    e.preventDefault();
     menu.classList.remove("active");
     menuOverlay.classList.remove("active");
     main.style.opacity = 1;
@@ -394,7 +397,10 @@ yearLinks.forEach((yearLink) => {
     const year = e.target.getAttribute("href");
     console.log(year);
     if (year === "#year-2024") {
-      scrollIntoView
+      // さっき取得した year（#year-2024）をセレクタとして使って、
+      // その場所のHTML要素を取得する
+      const target = document.querySelector(year);
+      target.scrollIntoView({ behavior: "smooth" });
     }
   });
 });
