@@ -1,22 +1,35 @@
 console.log("connect");
 const track = document.querySelector(".hero-track");
-const dots = document.querySelectorAll(".slide-dots span");
-console.log(dots);
+const photos = track.querySelectorAll("img");
+const dots = document.querySelector(".slide-dots");
+// 現在何枚目か
+let currentIndex = 0;
+function createDots(index) {
+  const span = document.createElement("span");
+  span.textContent = "〇";
+  span.dataset.index = index;
+  dots.appendChild(span);
+}
+// photo → 現在取り出している写真を入れる箱
+// index → 現在取り出している写真の番号を入れる箱
+photos.forEach((photo, index) => {
+  createDots(index);
+});
+const spans = dots.querySelectorAll("span");
+console.log();
 // 指を置いた瞬間のⅹ座標
 let startX = 0;
 // 指を離した瞬間のⅹ座標
 let endX = 0;
-// 現在何枚目か
-let currentIndex = 0;
-dots[currentIndex].textContent = "●";
 function showSlide() {
+  // 画像たちが入った箱ごと負の方向に移動
   track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 function rendedrDots() {
-  dots.forEach((dot) => {
-    dot.textContent = "○";
+  spans.forEach((span) => {
+    span.textContent = "○";
   });
-  dots[currentIndex].textContent = "●";
+  spans[currentIndex].textContent = "●";
 }
 // currentIndexと画像を接続
 // //.hero-track に指が触れた瞬間、指のX座標を startX に保存する
@@ -27,9 +40,10 @@ track.addEventListener("touchstart", (e) => {
 track.addEventListener("touchend", (e) => {
   endX = e.changedTouches[0].clientX;
   if (startX - endX > 50) {
-    if (currentIndex < 7) {
+    if (currentIndex < photos.length - 1) {
       console.log("左スワイプ");
       currentIndex++;
+      console.log(currentIndex);
       showSlide();
       rendedrDots();
     } else {
@@ -42,10 +56,11 @@ track.addEventListener("touchend", (e) => {
     console.log("右スワイプ");
     if (currentIndex > 0) {
       currentIndex--;
+      console.log(currentIndex);
       showSlide();
       rendedrDots();
     } else {
-      currentIndex = 7;
+      currentIndex = photos.length - 1;
       showSlide();
       rendedrDots();
     }
