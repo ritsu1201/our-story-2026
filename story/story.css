@@ -935,3 +935,192 @@ img {
   font-size: 18px;
   letter-spacing: 2px;
 }
+.card-12 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-12-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-12-photo {
+  width: 90%;
+  height: 350px;
+  margin: 30px auto 0;
+}
+.card-12-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.card-12-location {
+  width: 90%;
+  margin: 15px auto 70px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-12 .card-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-13 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-13-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-13-photo {
+  width: 90%;
+  height: 350px;
+  margin: 30px auto 0;
+}
+.card-13-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-13-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-13 .card-text {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-14 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-14-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-14-photo {
+  width: 90%;
+  height: 350px;
+  margin: 30px auto 0;
+}
+.card-14-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-14-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-14 .card-text {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-15 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-15-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-15-photo {
+  width: 90%;
+  height: 350px;
+  margin: 30px auto 60px;
+}
+.card-15-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-15-photo-last {
+  margin-bottom: 15px;
+}
+.card-15-collage {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto 50px;
+}
+.card-15-collage .collage-img {
+  position: absolute;
+  width: 48%;
+  height: 190px;
+  object-fit: cover;
+}
+.collage-img1 {
+  top: 0;
+  left: 0;
+}
+.collage-img2 {
+  top: 0;
+  right: 0;
+}
+.collage-img3 {
+  bottom: 0;
+  left: 0;
+}
+.collage-img4 {
+  bottom: 0;
+  right: 0;
+}
+.card-15-location {
+  width: 90%;
+  margin: 0 auto 35px;
+  margin-top: -40px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-15 .card-text {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
