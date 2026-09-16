@@ -374,15 +374,18 @@ const menuButton = document.querySelector(".menu-button");
 const menu = document.getElementById("menu");
 const menuOverlay = document.getElementById("menu-overlay");
 const main = document.querySelector("main");
+function closeMenu() {
+  menu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+  main.style.opacity = 1;
+}
 menuButton.addEventListener("click", () => {
   menu.classList.add("active");
   menuOverlay.classList.add("active");
   main.style.opacity = 0.5;
 });
 menuOverlay.addEventListener("click", () => {
-  menu.classList.remove("active");
-  menuOverlay.classList.remove("active");
-  main.style.opacity = 1;
+  closeMenu();
 });
 // .year-linkを持つ要素を全部取得
 const yearLinks = document.querySelectorAll(".year-link");
@@ -390,17 +393,12 @@ yearLinks.forEach((yearLink) => {
   yearLink.addEventListener("click", (e) => {
     // ブラウザ標準のページ内ジャンプを止め、JSでスクロールを制御する
     e.preventDefault();
-    menu.classList.remove("active");
-    menuOverlay.classList.remove("active");
-    main.style.opacity = 1;
-    // 要素の指定した属性の値を取得する（文字列として返ってくる）
+    closeMenu(); // 要素の指定した属性の値を取得する（文字列として返ってくる）
     const year = e.target.getAttribute("href");
     console.log(year);
-    if (year === "#year-2024") {
-      // さっき取得した year（#year-2024）をセレクタとして使って、
-      // その場所のHTML要素を取得する
-      const target = document.querySelector(year);
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+    // さっき取得した year（#year-2024）をセレクタとして使って、
+    // その場所のHTML要素を取得する
+    const target = document.querySelector(year);
+    target.scrollIntoView({ behavior: "smooth" });
   });
 });

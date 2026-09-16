@@ -116,6 +116,10 @@ img {
   font-size: 20px;
   letter-spacing: 3px;
 }
+.menu-section:first-child .menu-section-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
 .menu-description {
   text-align: center;
 }
@@ -143,6 +147,14 @@ img {
   background-color: #faf8f5;
   z-index: 400;
   box-sizing: border-box;
+}
+.year-link {
+  display: block;
+  text-align: center;
+}
+.menu-link {
+  display: block;
+  text-align: center;
 }
 .menu.active {
   transform: translateX(0);
@@ -672,6 +684,7 @@ img {
 .outlet2-text {
   text-align: right;
   font-size: 14px;
+  margin-top: 25px;
 }
 .outlet-text {
   font-family: "Shippori Mincho", serif;
@@ -754,5 +767,171 @@ img {
   text-align: center;
   font-size: 16px;
   transform: translateY(40px);
+  letter-spacing: 2px;
+}
+/* =========================
+   card-10
+========================= */
+.card-10 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-80px);
+  margin-bottom: -50px;
+}
+.card-10-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-30px);
+}
+/* 中華街 */
+.card-10-chinatown {
+  width: 80%;
+  height: 300px;
+  margin-left: 0;
+  margin-bottom: 80px;
+  position: relative;
+}
+/* 中華街の写真の後ろ */
+.card-10-chinatown::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(82, 91, 38);
+  top: 15px;
+  left: 15px;
+}
+/* 中華街の写真 */
+.card-10-chinatown img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+/* プラネタリウム */
+.card-10-planetarium {
+  width: 80%;
+  height: 300px;
+  margin-left: auto;
+  margin-bottom: 80px;
+  position: relative;
+}
+/* プラネタリウムの写真の後ろ */
+.card-10-planetarium::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(19, 38, 77);
+  top: 15px;
+  right: 15px;
+}
+/* プラネタリウムの写真 */
+.card-10-planetarium img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+/* 日付・場所 */
+.card-10-chinatown .card-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: start;
+}
+.card-10-planetarium .card-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: end;
+}
+
+/* 思い出の文章 */
+.card-10 .card-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =========================
+   card-11
+========================= */
+.card-11 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-11-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-5spx);
+}
+/* 郡山の2枚 */
+.koriyama {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 30px auto;
+}
+.koriyama-img1,
+.koriyama-img2 {
+  width: 48%;
+  height: 230px;
+}
+.koriyama-img1 img,
+.koriyama-img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.koriyama-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -25px;
+  margin-bottom: 5px;
+}
+/* 那須高原 */
+.nasu {
+  width: 95%;
+  margin: 0 auto 70px;
+}
+.nasu-img {
+  width: 100%;
+  height: 350px;
+}
+.nasu-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nasu .card-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: end;
+}
+/* 思い出の文章 */
+.card-11 .card-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
   letter-spacing: 2px;
 }

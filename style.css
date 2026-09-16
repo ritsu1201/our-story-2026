@@ -51,6 +51,9 @@ body {
   letter-spacing: 3px;
   font-weight: 500;
   font-family: "Cormorant Garamond", serif;
+  white-space: nowrap;
+  position: relative;
+  left: -20px;
 }
 .hero-content button {
   margin-top: 40px;

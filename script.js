@@ -27,7 +27,7 @@ track.addEventListener("touchstart", (e) => {
 track.addEventListener("touchend", (e) => {
   endX = e.changedTouches[0].clientX;
   if (startX - endX > 50) {
-    if (currentIndex < 5) {
+    if (currentIndex < 7) {
       console.log("左スワイプ");
       currentIndex++;
       showSlide();
@@ -45,7 +45,7 @@ track.addEventListener("touchend", (e) => {
       showSlide();
       rendedrDots();
     } else {
-      currentIndex = 5;
+      currentIndex = 7;
       showSlide();
       rendedrDots();
     }
