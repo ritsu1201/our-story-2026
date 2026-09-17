@@ -99,13 +99,3 @@ const exploreBtn = document.getElementById("explore-btn");
 exploreBtn.addEventListener("click", () => {
   location.href = "story/story.html";
 });
-track.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-  document.querySelector("#debug").textContent = `START: ${startX}`;
-});
-
-track.addEventListener("touchend", (e) => {
-  endX = e.changedTouches[0].clientX;
-  document.querySelector("#debug").textContent =
-    `END: ${endX} / X移動量: ${startX - endX} / index: ${currentIndex}`;
-});
