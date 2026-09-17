@@ -1124,3 +1124,42 @@ img {
   font-size: 18px;
   letter-spacing: 2px;
 }
+.card-16 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-16-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-16-photo {
+  width: 90%;
+  height: 350px;
+  margin: 30px auto 0;
+}
+.card-16-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-16-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-16 .card-text {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
