@@ -1,5 +1,6 @@
 console.log("connect");
 const track = document.querySelector(".hero-track");
+const heroImg = document.querySelector(".hero-img");
 const photos = track.querySelectorAll("img");
 const dots = document.querySelector(".slide-dots");
 // 現在何枚目か
@@ -34,12 +35,12 @@ function rendedrDots() {
 }
 // currentIndexと画像を接続
 // //.hero-track に指が触れた瞬間、指のX座標を startX に保存する
-track.addEventListener("touchstart", (e) => {
+heroImg.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
   console.log("startX:", startX);
 });
 // 指を離した瞬間のX座標を endX に保存する
-track.addEventListener("touchend", (e) => {
+heroImg.addEventListener("touchend", (e) => {
   endX = e.changedTouches[0].clientX;
   console.log("endX:", endX);
   console.log("Xの移動量:", startX - endX);
