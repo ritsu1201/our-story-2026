@@ -36,13 +36,12 @@ function rendedrDots() {
 // //.hero-track に指が触れた瞬間、指のX座標を startX に保存する
 track.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
-  console.log("startX:", startX);
+  document.querySelector("#debug").textContent = "touchstart";
 });
-// 指を離した瞬間のX座標を endX に保存する
+
 track.addEventListener("touchend", (e) => {
   endX = e.changedTouches[0].clientX;
-  console.log("endX:", endX);
-  console.log("Xの移動量:", startX - endX);
+  document.querySelector("#debug").textContent = "touchend";
   if (startX - endX > 50) {
     if (currentIndex < photos.length - 1) {
       console.log("判定前 currentIndex:", currentIndex);
