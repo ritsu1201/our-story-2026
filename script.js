@@ -22,6 +22,7 @@ let startX = 0;
 // 指を離した瞬間のⅹ座標
 let endX = 0;
 function showSlide() {
+  console.log("showSlide実行 currentIndex:", currentIndex);
   // 画像たちが入った箱ごと負の方向に移動
   track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
@@ -35,12 +36,16 @@ function rendedrDots() {
 // //.hero-track に指が触れた瞬間、指のX座標を startX に保存する
 track.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
+  console.log("startX:", startX);
 });
 // 指を離した瞬間のX座標を endX に保存する
 track.addEventListener("touchend", (e) => {
   endX = e.changedTouches[0].clientX;
+  console.log("endX:", endX);
+  console.log("Xの移動量:", startX - endX);
   if (startX - endX > 50) {
     if (currentIndex < photos.length - 1) {
+      console.log("判定前 currentIndex:", currentIndex);
       console.log("左スワイプ");
       currentIndex++;
       console.log(currentIndex);
@@ -94,4 +99,14 @@ reveals.forEach((reveal) => {
 const exploreBtn = document.getElementById("explore-btn");
 exploreBtn.addEventListener("click", () => {
   location.href = "story/story.html";
+});
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  document.querySelector("#debug").textContent = `START: ${startX}`;
+});
+
+track.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  document.querySelector("#debug").textContent =
+    `END: ${endX} / X移動量: ${startX - endX} / index: ${currentIndex}`;
 });
