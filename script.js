@@ -17,11 +17,21 @@ photos.forEach((photo, index) => {
   createDots(index);
 });
 const spans = dots.querySelectorAll("span");
-console.log();
 // 指を置いた瞬間のⅹ座標
 let startX = 0;
 // 指を離した瞬間のⅹ座標
 let endX = 0;
+// ドットクリックに対応した画像切り替え
+spans.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    console.log(e.target);
+    const dotNumber = Number(e.target.dataset.index);
+    console.log(dotNumber);
+    currentIndex = dotNumber;
+    showSlide();
+    rendedrDots();
+  });
+});
 function showSlide() {
   console.log("showSlide実行 currentIndex:", currentIndex);
   // 画像たちが入った箱ごと負の方向に移動
