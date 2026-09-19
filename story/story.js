@@ -109,10 +109,18 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("tokyo-img")) {
+      } else if (entry.target.classList.contains("shot-caption")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1400);
+      } else if (entry.target.classList.contains("tokyo-frame")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
+      } else if (entry.target.classList.contains("tokyo-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
       } else if (entry.target.classList.contains("dousei")) {
         setTimeout(() => {
           entry.target.classList.add("active");
@@ -189,6 +197,10 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
+      } else if (entry.target.classList.contains("valentine-frame")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 700);
       } else if (entry.target.classList.contains("valentine-card")) {
         setTimeout(() => {
           entry.target.classList.add("active");
@@ -201,6 +213,74 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 1200);
+      } else if (entry.target.classList.contains("card-10-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-10-chinatown")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("card-10-planetarium")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1000);
+      } else if (entry.target.classList.contains("card-11-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("koriyama")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("nasu-img")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("koriyama-location")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
       }
     }
   });

@@ -289,7 +289,8 @@ img {
 }
 .profile {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-top: -90px;
 }
 .profile-card {
   border: 1px solid black;
@@ -302,8 +303,32 @@ img {
   position: absolute;
   top: -30px;
   left: 120px;
-  background-color: rgb(251, 249, 249);
   padding: 0 10px;
+  z-index: 1;
+}
+.profile-role::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  top: 2px;
+  height: 20px;
+  background-color: #d8cfc2;
+  z-index: -1;
+  transform: rotate(-2deg);
+  border-radius: 45% 5% 40% 8%;
+}
+.profile-role::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  right: -2px;
+  top: 5px;
+  height: 15px;
+  background-color: #d8cfc2;
+  z-index: -2;
+  transform: rotate(1deg);
+  border-radius: 5% 40% 8% 45%;
 }
 .profile-img {
   width: 150px;
@@ -328,6 +353,12 @@ img {
   margin-top: 15px;
   margin-bottom: 5px;
 }
+.profile-birth {
+  font-size: 14px;
+}
+.profile-birthday {
+  transform: translateY(-15px);
+}
 .profile-name {
   font-size: 30px;
   margin-top: 5px;
@@ -337,6 +368,7 @@ img {
   margin-top: -12px;
 }
 .profile-like {
+  transform: translateY(-10px);
   text-align: center;
 }
 .sara {
@@ -353,6 +385,39 @@ img {
   letter-spacing: 3px;
   text-align: center;
   transform: translateY(-50px);
+}
+.card-3 .see-img {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-3 .see-img img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 45px;
+  background-color: white;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-3 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
 }
 .card-3 .card-date {
   font-size: 14px;
@@ -386,6 +451,40 @@ img {
   text-align: center;
   transform: translateY(-50px);
 }
+.card-4 .kirihuri-img {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-4 .kirihuri-img img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 45px;
+  background-color: white;
+  object-fit: cover;
+  object-position: bottom;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-4 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
 .card-4 .card-date {
   font-size: 14px;
   font-family: sans-serif;
@@ -406,12 +505,6 @@ img {
   margin-top: 40px;
   font-size: 18px;
 }
-.card-4 img {
-  object-position: bottom;
-}
-.card-5 img {
-  height: 450px;
-}
 .card-5 {
   margin-top: 100px;
 }
@@ -421,6 +514,39 @@ img {
   letter-spacing: 3px;
   text-align: center;
   transform: translateY(-50px);
+}
+.card-5 .ohira-img {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-5 .ohira-img img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 45px;
+  background-color: white;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-5 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
 }
 .card-5 .card-date {
   font-size: 14px;
@@ -491,6 +617,38 @@ img {
 .card-6-2 img {
   object-position: bottom;
 }
+.card-6 .shot-caption {
+  position: absolute;
+  bottom: -65px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
+.tokyo-section {
+  position: relative;
+}
+.tokyo-frame {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 5%;
+  z-index: 0;
+  pointer-events: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+}
+.card-6 {
+  position: relative;
+  z-index: 1;
+}
+.card-7 {
+  margin-top: 100px;
+}
 .card-7 .title {
   font-size: 16px;
   font-family: "Shippori Mincho", serif;
@@ -498,9 +656,48 @@ img {
   text-align: center;
   transform: translateY(-50px);
 }
-.card-7 img {
-  object-position: center;
+.card-7 .dousei-img {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-7 .dousei-photo {
   width: 100%;
+  height: 420px;
+  padding: 15px 10px 45px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+.card-7 .dousei-photo-inner {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+.card-7 .dousei-photo-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+}
+.card-7 .shot-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
 }
 .card-7 .card-date {
   font-size: 14px;
@@ -532,6 +729,7 @@ img {
 .ritsu-present img {
   height: 150px;
   transform: scale(1.6);
+  object-position: center;
 }
 .ritsu-present {
   width: 60%;
@@ -559,6 +757,7 @@ img {
 .dousei-card img {
   width: 100%;
   height: 250px;
+  object-position: center;
 }
 .dousei-card .card-location {
   position: absolute;
@@ -753,21 +952,56 @@ img {
   font-family: sans-serif;
   display: flex;
   justify-content: end;
-  margin-top: -15px;
+  margin-top: -20px;
   margin-right: 5px;
 }
 .card-9 .card-text {
   text-align: center;
   margin-top: 50px;
   font-size: 18px;
-  transform: translateY(40px);
+  transform: translateY(80px);
   letter-spacing: 2px;
 }
 .card-9 .sub-text {
   text-align: center;
   font-size: 16px;
-  transform: translateY(40px);
+  transform: translateY(80px);
   letter-spacing: 2px;
+}
+.card-9 {
+  position: relative;
+}
+.card-9 .shot-caption {
+  position: absolute;
+  bottom: 110px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
+
+.valentine-frame {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  top: -20px;
+  left: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  z-index: 0;
+  pointer-events: none;
+}
+.card-9 .valentine,
+.card-9 .valentine-card,
+.card-9 .valentine-date,
+.card-9 .valentine-text {
+  position: relative;
+  z-index: 1;
 }
 /* =========================
    card-10
@@ -858,7 +1092,8 @@ img {
 /* 思い出の文章 */
 .card-10 .card-text {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: -60px;
   font-size: 18px;
   letter-spacing: 2px;
 }
@@ -932,6 +1167,7 @@ img {
 .card-11 .card-text {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: -50px;
   font-size: 18px;
   letter-spacing: 2px;
 }
@@ -951,15 +1187,33 @@ img {
   transform: translateY(-20px);
 }
 .card-12-photo {
+  position: relative;
   width: 90%;
-  height: 350px;
+  height: 400px;
   margin: 30px auto 0;
+  padding: 15px 10px 45px;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
 }
 .card-12-photo img {
   width: 100%;
-  height: 100%;
+  height: 340px;
   object-fit: cover;
   object-position: center;
+}
+.card-12 .shot-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
 }
 .card-12-location {
   width: 90%;
@@ -1162,4 +1416,50 @@ img {
   margin-top: 35px;
   font-size: 18px;
   letter-spacing: 2px;
+}
+.card-17 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-17-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-17-photo {
+  width: 90%;
+  height: 350px;
+  margin: 30px auto 0;
+}
+.card-17-frame {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+}
+.card-17-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-17-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-17 .card-text {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  transform: translateY(60px);
 }
