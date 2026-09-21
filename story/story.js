@@ -241,46 +241,126 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
+      } else if (entry.target.classList.contains("card-12-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
       } else if (entry.target.classList.contains("koriyama-location")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("card-12-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("card-13-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-13-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("card-17-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-17-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("card-14-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-14-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("collage-img1")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("collage-img4")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 600);
+      } else if (entry.target.classList.contains("collage-img2")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 700);
+      } else if (entry.target.classList.contains("collage-img3")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("card-16-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-16-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+      } else if (entry.target.classList.contains("card-15-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 800);
-      } else if (entry.target.classList.contains("koriyama-location")) {
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 800);
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-15-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
       }
     }
   });
