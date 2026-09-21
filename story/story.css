@@ -398,7 +398,7 @@ img {
 .card-3 .see-img img {
   width: 100%;
   height: 360px;
-  padding: 15px 10px 45px;
+  padding: 15px 10px 70px;
   background-color: white;
   object-fit: cover;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
@@ -463,7 +463,7 @@ img {
 .card-4 .kirihuri-img img {
   width: 100%;
   height: 360px;
-  padding: 15px 10px 45px;
+  padding: 15px 10px 70px;
   background-color: white;
   object-fit: cover;
   object-position: bottom;
@@ -527,7 +527,7 @@ img {
 .card-5 .ohira-img img {
   width: 100%;
   height: 360px;
-  padding: 15px 10px 45px;
+  padding: 15px 10px 70px;
   background-color: white;
   object-fit: cover;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
@@ -668,7 +668,7 @@ img {
 .card-7 .dousei-photo {
   width: 100%;
   height: 420px;
-  padding: 15px 10px 45px;
+  padding: 15px 10px 70px;
   box-sizing: border-box;
   background-color: white;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
@@ -757,7 +757,9 @@ img {
 .dousei-card img {
   width: 100%;
   height: 250px;
-  object-position: center;
+  object-fit: cover;
+  border: 2px solid #888;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 .dousei-card .card-location {
   position: absolute;
