@@ -309,35 +309,35 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-18-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-18-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-19-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-19-ramen")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-19-yomiuriland")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-20-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-20-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
-        setTimeout(() => {
-          entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
-        setTimeout(() => {
-          entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
-        setTimeout(() => {
-          entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+        }, 800);
+      } else if (entry.target.classList.contains("")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);

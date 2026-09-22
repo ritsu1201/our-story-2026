@@ -1192,7 +1192,7 @@ img {
 .card-12-photo {
   position: relative;
   width: 90%;
-  height: 400px;
+  height: 420px;
   margin: 30px auto 0;
   padding: 15px 10px 70px;
   box-sizing: border-box;
@@ -1209,7 +1209,7 @@ img {
 }
 .card-12 .shot-caption {
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   left: 0;
   width: 100%;
   margin: 0;
@@ -1561,4 +1561,213 @@ img {
   font-size: 18px;
   letter-spacing: 2px;
   transform: translateY(80px);
+}
+.card-18 .title {
+  font-size: 18px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+  margin-top: -50px;
+}
+.card-18-date {
+  font-size: 14px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-18-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-18-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: white;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-18 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
+.card-18 .shot-caption2 {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
+
+.card-18 .card-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: end;
+}
+.card-18 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -40px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =========================
+   card-19
+========================= */
+.card-19 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-80px);
+  margin-bottom: -50px;
+}
+.card-19-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-30px);
+}
+/* ラーメン博物館 */
+.card-19-ramen {
+  width: 80%;
+  height: 300px;
+  margin-left: 0;
+  margin-bottom: 80px;
+  position: relative;
+}
+/* ラーメン博物館の写真の後ろ */
+.card-19-ramen::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(31, 29, 77);
+  top: 15px;
+  left: 15px;
+}
+/* ラーメン博物館の写真 */
+.card-19-ramen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+/* よみうりランド */
+.card-19-yomiuriland {
+  width: 80%;
+  height: 300px;
+  margin-left: auto;
+  margin-bottom: 80px;
+  position: relative;
+}
+/* よみうりランドの写真の後ろ */
+.card-19-yomiuriland::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(34, 45, 20);
+  top: 15px;
+  right: 15px;
+}
+/* よみうりランドの写真 */
+.card-19-yomiuriland img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+/* 日付・場所 */
+.card-19-ramen .card-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: start;
+}
+.card-19-yomiuriland .card-location {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: end;
+}
+/* 思い出の文章 */
+.card-19 .card-text {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: -60px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =========================
+   card-20
+========================= */
+.card-20 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-80px);
+  margin-bottom: -50px;
+}
+.card-20-photo {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.card-20-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.card-20-date {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: end;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.card-20 .card-text {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: -60px;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
