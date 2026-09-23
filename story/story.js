@@ -397,11 +397,91 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-27-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-27-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-27-last-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-27-second-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-28-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-28-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-27-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
