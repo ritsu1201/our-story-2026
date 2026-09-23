@@ -399,7 +399,7 @@ img {
   width: 100%;
   height: 360px;
   padding: 15px 10px 70px;
-  background-color: white;
+  background-color: rgb(180, 151, 111);
   object-fit: cover;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
   border-radius: 0;
@@ -416,7 +416,7 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-size: 16px;
   letter-spacing: 3px;
-  color: #555;
+  color: #e3e1e1;
   z-index: 2;
 }
 .card-3 .card-date {
@@ -464,7 +464,7 @@ img {
   width: 100%;
   height: 360px;
   padding: 15px 10px 70px;
-  background-color: white;
+  background-color: rgb(2, 5, 56);
   object-fit: cover;
   object-position: bottom;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
@@ -482,7 +482,7 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-size: 16px;
   letter-spacing: 3px;
-  color: #555;
+  color: #efeeee;
   z-index: 2;
 }
 .card-4 .card-date {
@@ -528,7 +528,7 @@ img {
   width: 100%;
   height: 360px;
   padding: 15px 10px 70px;
-  background-color: white;
+  background-color: black;
   object-fit: cover;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
   border-radius: 0;
@@ -957,6 +957,7 @@ img {
   justify-content: end;
   margin-top: -20px;
   margin-right: 5px;
+  color: #b9b7b7;
 }
 .card-9 .card-text {
   text-align: center;
@@ -984,7 +985,7 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-size: 16px;
   letter-spacing: 3px;
-  color: #555;
+  color: #e2e0e0;
   z-index: 2;
 }
 
@@ -998,6 +999,7 @@ img {
   box-sizing: border-box;
   z-index: 0;
   pointer-events: none;
+  background-color: #634317;
 }
 .card-9 .valentine,
 .card-9 .valentine-card,
@@ -1263,7 +1265,7 @@ img {
   width: 100%;
   height: 360px;
   padding: 15px 10px 70px;
-  background-color: white;
+  background-color: rgb(109, 146, 104);
   object-fit: cover;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
   border-radius: 0;
@@ -1281,7 +1283,7 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-size: 16px;
   letter-spacing: 3px;
-  color: #555;
+  color: #e5e3e3;
   z-index: 2;
 }
 .card-13 .card-location {
@@ -1489,7 +1491,7 @@ img {
   width: 100%;
   height: 360px;
   padding: 15px 10px 70px;
-  background-color: white;
+  background-color: rgb(101, 150, 170);
   object-fit: cover;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
   border-radius: 0;
@@ -1506,7 +1508,7 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-size: 16px;
   letter-spacing: 3px;
-  color: #555;
+  color: #e0dddd;
   z-index: 2;
 }
 .card-16 .card-location {
@@ -1736,7 +1738,7 @@ img {
    card-20
 ========================= */
 .card-20 .title {
-  font-size: 16px;
+  font-size: 19px;
   font-family: "Shippori Mincho", serif;
   letter-spacing: 3px;
   text-align: center;
@@ -1770,4 +1772,436 @@ img {
   margin-bottom: -60px;
   font-size: 18px;
   letter-spacing: 2px;
+}
+/* =========================
+   card-21
+========================= */
+.card-21 .title {
+  font-size: 18px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-21-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-21-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-21-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: rgb(107, 51, 51);
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-21 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #ece8e8;
+  z-index: 2;
+}
+.card-21 .card-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-21 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -40px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+/* =========================
+   card-22
+========================= */
+.card-22 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-22-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-22-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-22-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: rgb(242, 223, 235);
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-22 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #333333;
+  z-index: 2;
+}
+.card-22 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -40px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-23 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-23-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-23-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-23-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: white;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-23 .card-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-23 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-23-night-title {
+  margin-top: 100px;
+}
+.card-23 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
+.card-23-tokyo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: black;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-23-tokyo .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #f2f0f0;
+  z-index: 2;
+}
+.card-24 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-24-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-24-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-24-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: rgb(178, 108, 38);
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-24 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #f2f1f1;
+  z-index: 2;
+}
+.card-24 .card-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-24 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -40px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-25 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-25-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-25-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-25-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: white;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-25 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
+.card-25 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -40px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-26 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-26-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-26-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-26-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: white;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-26 .shot-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #555;
+  z-index: 2;
+}
+.card-26 .card-location {
+  width: 90%;
+  margin: 12px auto 35px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-26 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-26-pregnancy {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: -100px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.card-26-pregnancy-img {
+  width: 60%;
+  flex-shrink: 0;
+}
+.card-26-pregnancy-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+}
+.card-26-pregnancy-text {
+  flex: 1;
+  font-family: "Shippori Mincho", serif;
+  line-height: 1.9;
+  font-size: 12px;
+}
+.card-26-pregnancy-title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: -70px;
+  margin-top: 0;
+}
+.card-26-pregnancy-text p {
+  margin: 0;
 }

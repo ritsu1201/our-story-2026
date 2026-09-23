@@ -337,19 +337,63 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("")) {
+      } else if (entry.target.classList.contains("card-21-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-21-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-22-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-22-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-15-title")) {
+      } else if (entry.target.classList.contains("card-23-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-23-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-23-night-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-24-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-24-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-25-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-25-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-26-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 500);
+      } else if (entry.target.classList.contains("card-26-photo")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-26-pregnancy")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-26-pregnancy-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
