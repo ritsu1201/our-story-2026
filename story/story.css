@@ -2361,8 +2361,8 @@ img {
 }
 .card-28-photo {
   position: relative;
-  width: 75%;
-  height: 390px;
+  width: 90%;
+  height: 450px;
   margin: 30px auto 0;
   display: flex;
   justify-content: center;
@@ -2370,9 +2370,9 @@ img {
 }
 .card-28-photo img {
   width: 100%;
-  height: 300px;
+  height: 360px;
   padding: 15px 10px 70px;
-  background-color: white;
+  background-color: black;
   object-fit: cover;
   object-position: 60% 0;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
@@ -2381,6 +2381,70 @@ img {
   z-index: 1;
 }
 .card-28 .shot-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #edecec;
+  z-index: 2;
+}
+.card-28 .card-location {
+  width: 90%;
+  margin: 12px auto 35px;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  text-align: right;
+}
+.card-28 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -50px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card-29 .title {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  transform: translateY(-50px);
+  margin-bottom: -35px;
+}
+.card-29-date {
+  font-size: 16px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  transform: translateY(-20px);
+}
+.card-29-photo {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-29-photo img {
+  width: 100%;
+  height: 360px;
+  padding: 15px 10px 70px;
+  background-color: white;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+.card-29 .shot-caption {
   position: absolute;
   bottom: 25px;
   left: 0;
@@ -2393,7 +2457,7 @@ img {
   color: #555;
   z-index: 2;
 }
-.card-28 .card-location {
+.card-29 .card-location {
   width: 90%;
   margin: 12px auto 35px;
   font-size: 12px;
@@ -2401,10 +2465,10 @@ img {
   font-family: sans-serif;
   text-align: right;
 }
-.card-28 .card-text {
+.card-29 .card-text {
   text-align: center;
   margin-top: 80px;
-  margin-bottom: 70px;
+  margin-bottom: -50px;
   font-size: 18px;
   letter-spacing: 2px;
 }
