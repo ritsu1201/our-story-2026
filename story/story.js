@@ -437,14 +437,14 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("card-27-title")) {
+      } else if (entry.target.classList.contains("ritsu-doodle")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
+        }, 800);
+      } else if (entry.target.classList.contains("sara-doodle")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
+        }, 800);
       } else if (entry.target.classList.contains("card-27-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");

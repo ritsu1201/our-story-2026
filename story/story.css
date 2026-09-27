@@ -222,7 +222,6 @@ img {
 .card1-doodle-2.reveal.active {
   transform: translateY(0) scale(1) rotate(30deg);
 }
-
 .first-shot-caption {
   position: absolute;
   bottom: 12px;
@@ -245,7 +244,7 @@ img {
   box-sizing: border-box;
   background-color: white;
   border-radius: 2px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .card1-bg {
@@ -375,6 +374,33 @@ img {
   width: 100%;
   transform: translateY(-20px) scale(1.6);
   object-fit: cover;
+}
+.ritsu-doodle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  right: -20px;
+  bottom: -20px;
+  z-index: 3;
+  pointer-events: none;
+  transform: scale(5) rotate(40deg);
+}
+.sara-doodle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  left: -40px;
+  bottom: -20px;
+  z-index: 3;
+  pointer-events: none;
+}
+.ritsu-doodle.reveal.active {
+  transform: scale(5) rotate(40deg);
+}
+.sara-doodle.reveal.active {
+  transform: scale(4) rotate(-10deg);
 }
 .card-3 {
   margin-top: 100px;
