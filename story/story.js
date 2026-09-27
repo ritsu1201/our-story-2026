@@ -445,38 +445,38 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 800);
-      } else if (entry.target.classList.contains("card-27-title")) {
+      } else if (entry.target.classList.contains("card3-doodle")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1200);
+      } else if (entry.target.classList.contains("text-title")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 800);
+      } else if (entry.target.classList.contains("card-31-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
+      } else if (entry.target.classList.contains("card-31-photo")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
+        }, 800);
+      } else if (entry.target.classList.contains("birth-entry-sub")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
+        }, 1000);
+      } else if (entry.target.classList.contains("birth-entry-date")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
+        }, 1200);
+      } else if (entry.target.classList.contains("birth-entry-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
+        }, 1400);
+      } else if (entry.target.classList.contains("birth-entry-link")) {
         setTimeout(() => {
           entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
-        setTimeout(() => {
-          entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
-        setTimeout(() => {
-          entry.target.classList.add("active");
-        }, 500);
+        }, 1400);
       } else if (entry.target.classList.contains("card-27-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");

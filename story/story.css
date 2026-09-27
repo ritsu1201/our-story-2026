@@ -404,6 +404,7 @@ img {
 }
 .card-3 {
   margin-top: 100px;
+  position: relative;
 }
 .card-3 .title {
   font-size: 16px;
@@ -466,6 +467,19 @@ img {
   margin-bottom: -50px;
   font-size: 18px;
   transform: translateY(40px);
+}
+.card3-doodle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  left: -120px;
+  bottom: -160px;
+  z-index: 3;
+  pointer-events: none;
+}
+.card3-doodle.reveal.active {
+  transform: scale(0.4) rotate(10deg);
 }
 .kirihuri-section {
   padding-bottom: 20px;
@@ -2555,4 +2569,101 @@ img {
   margin-bottom: -50px;
   font-size: 18px;
   letter-spacing: 2px;
+  line-height: 2;
+}
+.anniversary-line {
+  border: none;
+  border-top: 1px solid #868686;
+  margin: 100px 30px 0;
+}
+.text-title {
+  font-size: 18px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 80px 0 -100px;
+}
+.birth-entry {
+  width: 90%;
+  max-width: 900px;
+  margin: 150px auto 200px;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.birth-entry-sub {
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin: 0 0 80px;
+  color: #777;
+}
+
+.birth-entry-date {
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin: 0 0 50px;
+}
+
+.birth-entry-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: 1.4;
+  margin: 0 0 80px;
+}
+
+.birth-entry-link {
+  display: inline-block;
+  color: #111;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  border-bottom: 1px solid #777;
+  padding-bottom: 8px;
+}
+.card-31 {
+  margin-top: -60px;
+  margin-bottom: 150px;
+}
+.card-31-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.card-31-title .title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin: 0 0 20px;
+}
+.card-31-date {
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin: 0;
+}
+.card-31-photo {
+  width: 90%;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-31-photo img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 10% 40%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+.card-31 .card-text {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -50px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 2;
+  margin: 50px 0 -150px;
 }
