@@ -45,11 +45,14 @@
 #after.none {
   display: none;
 }
+html {
+  overflow-x: clip;
+}
 body {
   background-color: rgb(251, 249, 249);
   color: rgb(10, 10, 10);
   font-family: "Shippori Mincho", serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 img {
   border-radius: 12px;
