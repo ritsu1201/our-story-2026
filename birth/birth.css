@@ -32,9 +32,11 @@ body.bright {
   height: 100%;
   text-align: center;
   transition: opacity 2.5s ease;
+  z-index: 5;
 }
 .birth-content.fade-out {
   opacity: 0;
+  z-index: 0;
 }
 /* AND THEN... */
 .and-then {
@@ -167,6 +169,7 @@ body.bright {
   transition:
     opacity 4.5s ease,
     transform 6s ease;
+  z-index: 1;
 }
 .birth-photo.show {
   opacity: 1;
@@ -182,4 +185,121 @@ body.bright {
 }
 .birth-photo.show img {
   filter: brightness(1);
+}
+.welcome {
+  position: fixed;
+  top: 5%;
+  left: 7%;
+  z-index: 2;
+  text-align: center;
+  transform: rotate(-15deg);
+}
+.welcome-line1,
+.welcome-line2 {
+  font-family: "Allura", cursive;
+  font-size: 50px;
+  color: #fff;
+}
+.welcome-line2 {
+  margin-top: -10px;
+}
+.since-birth {
+  position: fixed;
+  z-index: 3;
+  left: 10%;
+  bottom: -10px;
+  text-align: center;
+  /* 最初は左にずらして透明 */
+  opacity: 0;
+  transform: translateX(-80px);
+  /* 表示するときのアニメーション */
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+.since-birth.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.birth-time-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.time-number {
+  font-family: "Bodoni Moda", serif;
+  font-size: 40px;
+  line-height: 1;
+}
+.time-label {
+  margin-top: 5px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+.since-text {
+  font-family: "Bodoni Moda", serif;
+  font-size: 12px;
+  position: absolute;
+  top: -40px;
+  white-space: nowrap;
+  opacity: 0.6;
+}
+.since-text::after {
+  content: "";
+  display: block;
+  width: 150px;
+  opacity: 0.3;
+  height: 1px;
+  background: black;
+  margin: 2px auto 0;
+}
+.scroll-button {
+  position: fixed;
+  right: 7%;
+  bottom: 2%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+}
+.scroll-arrow {
+  margin-top: 8px;
+  font-size: 18px;
+  letter-spacing: 0;
+  animation: scrollArrow 1.5s ease-in-out infinite;
+  animation-delay: 4s;
+}
+@keyframes scrollFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+.scroll-button.show {
+  opacity: 0.8;
+  transform: translateY(0);
 }

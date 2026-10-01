@@ -1,10 +1,18 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 * {
   box-sizing: border-box;
 }
-/* CSS全称セレクタ */
-body {
-  margin: 0;
+.home {
+  position: fixed;
+  inset: 0;
 }
+/* CSS全称セレクタ */
 /* デフォルト余白除去 */
 .hero {
   position: relative; /* この要素自身を基準位置として扱えるようにする */
