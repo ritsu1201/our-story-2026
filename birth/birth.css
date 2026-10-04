@@ -280,16 +280,6 @@ body.bright {
   animation: scrollArrow 1.5s ease-in-out infinite;
   animation-delay: 4s;
 }
-@keyframes scrollFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 0.8;
-    transform: translateY(0);
-  }
-}
 @keyframes scrollArrow {
   0%,
   100% {
@@ -302,4 +292,12 @@ body.bright {
 .scroll-button.show {
   opacity: 0.8;
   transform: translateY(0);
+}
+@media (max-width: 600px) {
+  .since-birth {
+    bottom: 0;
+  }
+  .since-text {
+    top: -25px;
+  }
 }
