@@ -117,3 +117,11 @@ function updateSinceBirth() {
 }
 updateSinceBirth();
 setInterval(updateSinceBirth, 1000);
+const scrollBtn = document.querySelector(".scroll-button");
+scrollBtn.addEventListener("click", () => {
+  console.log("click");
+  document.querySelector(".birth-profile").classList.add("show");
+  setTimeout(() => {
+    document.querySelector(".profile-info").classList.add("show");
+  }, 2000);
+});

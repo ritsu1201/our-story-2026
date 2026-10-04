@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0 10px;
+}
+.text-title {
+  font-size: 18px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 50px 0 -30px;
+}
+.text-title::after {
+  content: "";
+  display: block;
+  width: 150px;
+  opacity: 0.5;
+  height: 1px;
+  background: black;
+  margin: 2px auto 0;
+}
+.card-text {
+  font-family: "Shippori Mincho", serif;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
