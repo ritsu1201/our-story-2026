@@ -188,7 +188,7 @@ body.bright {
 }
 .welcome {
   position: fixed;
-  top: 5%;
+  top: 2%;
   left: 7%;
   z-index: 2;
   text-align: center;
@@ -240,9 +240,9 @@ body.bright {
 }
 .since-text {
   font-family: "Bodoni Moda", serif;
-  font-size: 12px;
+  font-size: 14px;
   position: absolute;
-  top: -40px;
+  top: -43px;
   white-space: nowrap;
   opacity: 0.6;
 }
@@ -250,7 +250,7 @@ body.bright {
   content: "";
   display: block;
   width: 150px;
-  opacity: 0.3;
+  opacity: 0.5;
   height: 1px;
   background: black;
   margin: 2px auto 0;
@@ -294,10 +294,8 @@ body.bright {
   transform: translateY(0);
 }
 @media (max-width: 600px) {
-  .since-birth {
-    bottom: 0;
-  }
-  .since-text {
-    top: -25px;
+  .birth-photo img {
+    object-position: 40% 100%;
+    transform: scale(1.2) translateY(-5%);
   }
 }
