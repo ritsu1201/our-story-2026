@@ -306,7 +306,7 @@ body.bright {
   z-index: 10;
 }
 .profile-photo {
-  transform: scale(2) translateY(10%);
+  transform: scale(2) translateY(0%);
   position: relative;
 }
 .profile-photo img {
@@ -315,12 +315,18 @@ body.bright {
 }
 .profile-info {
   transform: translateX(-200%);
-  font-family: "Nunito", sans-serif;
-  bottom: 10%;
+  font-family: "Quicksand", sans-serif;
+  bottom: 15%;
   left: 10%;
   position: absolute;
   z-index: 11;
   transition: all 1s ease;
+}
+.profile-info h2 {
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 6px;
+  font-weight: 500;
+  transform: translateX(50px);
 }
 .profile-info.show {
   transform: translateX(0);
