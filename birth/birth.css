@@ -308,7 +308,7 @@ body.bright {
   z-index: 10;
 }
 .profile-photo {
-  transform: scale(2) translateY(0%);
+  transform: scale(2) translateY(2%);
   position: relative;
 }
 .profile-photo img {
