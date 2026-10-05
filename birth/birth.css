@@ -3,8 +3,9 @@ html,
 body {
   margin: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 body {
   background: #000;
@@ -229,7 +230,6 @@ body.bright {
   line-height: 1;
 }
 .time-label {
-  margin-top: 5px;
   font-family: "Cormorant Garamond", serif;
   font-size: 14px;
   letter-spacing: 3px;
@@ -237,8 +237,9 @@ body.bright {
 .since-text {
   font-family: "Bodoni Moda", serif;
   font-size: 14px;
+  font-weight: 600;
   position: absolute;
-  top: -43px;
+  top: -48px;
   white-space: nowrap;
   opacity: 0.6;
 }
@@ -296,40 +297,116 @@ body.bright {
   }
 }
 .birth-profile {
-  position: fixed;
   inset: 0;
-  transform: translateY(120%);
-  transition: transform 1.2s ease;
+  transform: translateY(100%);
+  transition:
+    transform 1.2s ease,
+    opacity 1.2s ease;
   opacity: 0;
+  z-index: 10;
+  overflow: hidden;
 }
 .birth-profile.show {
   transform: translateY(0);
   opacity: 1;
-  z-index: 10;
 }
 .profile-photo {
-  transform: scale(2) translateY(2%);
-  position: relative;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.4) translateY(-12%);
 }
 .profile-photo img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .profile-info {
-  transform: translateX(-200%);
-  font-family: "Quicksand", sans-serif;
-  bottom: 15%;
-  left: 10%;
   position: absolute;
-  z-index: 11;
-  transition: all 1s ease;
-}
-.profile-info h2 {
-  font-family: "Quicksand", sans-serif;
-  letter-spacing: 6px;
-  font-weight: 500;
-  transform: translateX(50px);
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-150%);
+  transition: all 1.2s ease;
+  width: 85%;
+  text-align: center;
+  color: #000;
 }
 .profile-info.show {
-  transform: translateX(0);
+  transform: translateX(-50%);
+}
+.profile-name {
+  text-align: center;
+  transform: translateY(-40px);
+}
+.name-jp {
+  font-family: "Bodoni Moda", serif;
+  font-size: 60px;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+.name-en {
+  margin-top: 8px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+.profile-info h2 {
+  margin: 0 0 28px;
+  font-family: "Bodoni Moda", serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  transform: translateY(-20px);
+}
+.profile-date {
+  margin-bottom: 28px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transform: translateY(-20px);
+}
+.profile-birth {
+  font-size: 20px;
+  font-family: "Bodoni Moda", serif;
+}
+.profile-date::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  margin: 4px auto 0;
+  background: #000;
+  opacity: 0.4;
+}
+.profile-data {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+}
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-20px);
+}
+.profile-number {
+  font-family: "Bodoni Moda", serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+.profile-label {
+  margin-top: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.label-p {
+  margin-top: -25px;
+  transform: translateY(-20px);
+}
+.scroll-2.show {
+  opacity: 0.8;
+  transform: translateY(0);
 }

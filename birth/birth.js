@@ -117,11 +117,15 @@ function updateSinceBirth() {
 }
 updateSinceBirth();
 setInterval(updateSinceBirth, 1000);
-const scrollBtn = document.querySelector(".scroll-button");
-scrollBtn.addEventListener("click", () => {
+const scrollBtn = document.querySelectorAll(".scroll-button");
+console.log(scrollBtn);
+scrollBtn[0].addEventListener("click", () => {
   console.log("click");
-  document.querySelector(".birth-profile").classList.add("show");
+  window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  document.querySelector(".birth-photo").classList.add("show");
+
   setTimeout(() => {
     document.querySelector(".profile-info").classList.add("show");
+    scrollBtn[1].classList.add("show");
   }, 2000);
 });
