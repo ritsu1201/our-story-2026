@@ -176,7 +176,6 @@ img {
   text-align: center;
   font-size: 35px;
   text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.3);
-  margin-bottom: 480px;
 }
 .photo .title {
   font-size: 16px;
@@ -184,6 +183,46 @@ img {
   letter-spacing: 3px;
   text-align: center;
   transform: translateY(-100px);
+}
+.scroll-button {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease;
+  margin-top: 400px;
+}
+.scroll-arrow {
+  margin-top: 8px;
+  font-size: 18px;
+  letter-spacing: 0;
+  animation: scrollArrow 1.5s ease-in-out infinite;
+  animation-delay: 4s;
+}
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+.scroll-button.show {
+  opacity: 0.8;
+  transform: translateY(0);
+}
+@media (max-width: 600px) {
+  .birth-photo img {
+    object-position: 40% 100%;
+    transform: scale(1.2) translateY(-5%);
+  }
 }
 .card1-content {
   position: relative;

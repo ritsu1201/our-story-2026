@@ -137,11 +137,6 @@ window.addEventListener(
     e.preventDefault();
   },
   { passive: false },
-  "touchmove",
-  (e) => {
-    e.preventDefault();
-  },
-  { passive: false },
 );
 window.addEventListener(
   "touchmove",
@@ -150,3 +145,8 @@ window.addEventListener(
   },
   { passive: false },
 );
+scrollBtn[1].addEventListener("click", () => {
+  scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  console.log("click");
+  console.log(window.scrollY);
+});

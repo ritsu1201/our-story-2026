@@ -21,6 +21,10 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 1500);
+      } else if (entry.target.classList.contains("scroll-button")) {
+        setTimeout(() => {
+          entry.target.classList.add("active");
+        }, 1500);
       } else if (entry.target.classList.contains("card1-title")) {
         setTimeout(() => {
           entry.target.classList.add("active");
@@ -477,14 +481,6 @@ const observer = new IntersectionObserver((entries) => {
         setTimeout(() => {
           entry.target.classList.add("active");
         }, 1400);
-      } else if (entry.target.classList.contains("card-27-title")) {
-        setTimeout(() => {
-          entry.target.classList.add("active");
-        }, 500);
-      } else if (entry.target.classList.contains("card-27-title")) {
-        setTimeout(() => {
-          entry.target.classList.add("active");
-        }, 500);
       }
     }
   });
@@ -492,6 +488,17 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach((reveal) => {
   //   監視員に何を監視するのか指示する
   observer.observe(reveal);
+});
+function preventScroll(e) {
+  e.preventDefault();
+}
+window.addEventListener("wheel", preventScroll, { passive: false });
+window.addEventListener("touchmove", preventScroll, { passive: false });
+const scrollBtn = document.querySelector(".scroll-button");
+scrollBtn.addEventListener("click", () => {
+  window.removeEventListener("wheel", preventScroll);
+  window.removeEventListener("touchmove", preventScroll);
+  scrollTo({ top: window.innerHeight, behavior: "smooth" });
 });
 const images = document.querySelectorAll(".modal-target");
 const modalImg = document.querySelector(".modal-img");

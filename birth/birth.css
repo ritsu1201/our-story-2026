@@ -410,3 +410,7 @@ body.bright {
   opacity: 0.8;
   transform: translateY(0);
 }
+.birth-story {
+  position: absolute;
+  height: 100vh;
+}
