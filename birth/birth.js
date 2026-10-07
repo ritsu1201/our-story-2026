@@ -121,11 +121,32 @@ const scrollBtn = document.querySelectorAll(".scroll-button");
 console.log(scrollBtn);
 scrollBtn[0].addEventListener("click", () => {
   console.log("click");
+  document.querySelector(".since-birth").classList.remove("show");
   window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   document.querySelector(".birth-photo").classList.add("show");
-
+  console.log(window.scrollY);
+  document.querySelector(".birth-profile").classList.add("show");
   setTimeout(() => {
     document.querySelector(".profile-info").classList.add("show");
     scrollBtn[1].classList.add("show");
-  }, 2000);
+  }, 1200);
 });
+window.addEventListener(
+  "wheel",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false },
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false },
+);
+window.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false },
+);

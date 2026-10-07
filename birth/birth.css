@@ -24,7 +24,7 @@ body.bright {
   overflow: visible;
 } /* 全体 */
 .birth-content {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -157,16 +157,16 @@ body.bright {
   transform: translate(-50%, -50%) scale(0.8);
 }
 .birth-photo {
-  position: fixed;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   opacity: 0;
   transform: scale(1.08);
   transition:
     opacity 4.5s ease,
     transform 6s ease;
   z-index: 1;
+  position: relative;
 }
 .birth-photo.show {
   opacity: 1;
@@ -256,7 +256,7 @@ body.bright {
   position: fixed;
   right: 7%;
   bottom: 2%;
-  z-index: 4;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,16 +298,16 @@ body.bright {
 }
 .birth-profile {
   inset: 0;
-  transform: translateY(100%);
   transition:
     transform 1.2s ease,
     opacity 1.2s ease;
   opacity: 0;
   z-index: 10;
   overflow: hidden;
+  height: 100vh;
+  position: relative;
 }
 .birth-profile.show {
-  transform: translateY(0);
   opacity: 1;
 }
 .profile-photo {
