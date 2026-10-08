@@ -253,9 +253,9 @@ body.bright {
   margin: 2px auto 0;
 }
 .scroll-button {
-  position: fixed;
-  right: 7%;
-  bottom: 2%;
+  position: absolute;
+  bottom: 5px;
+  right: 10%;
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -269,6 +269,7 @@ body.bright {
   transition:
     opacity 1.5s ease,
     transform 1.5s ease;
+  pointer-events: none;
 }
 .scroll-arrow {
   margin-top: 8px;
@@ -289,6 +290,7 @@ body.bright {
 .scroll-button.show {
   opacity: 0.8;
   transform: translateY(0);
+  pointer-events: auto;
 }
 @media (max-width: 600px) {
   .birth-photo img {
@@ -303,8 +305,9 @@ body.bright {
     opacity 1.2s ease;
   opacity: 0;
   z-index: 10;
-  overflow: hidden;
+  width: 100%;
   height: 100vh;
+  overflow: hidden;
   position: relative;
 }
 .birth-profile.show {
@@ -316,6 +319,8 @@ body.bright {
   width: 100%;
   height: 100%;
   transform: scale(1.4) translateY(-12%);
+  pointer-events: none;
+  z-index: 0;
 }
 .profile-photo img {
   width: 100%;
@@ -412,6 +417,93 @@ body.bright {
   transform: translateY(0);
 }
 .birth-story {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 140px 0 180px;
+  background: #fff;
+  color: #111;
+  overflow: hidden;
+}
+.story-intro {
+  width: 80%;
+  margin: 0 auto 160px;
+  text-align: center;
+}
+.story-eyebrow {
+  margin: 0 0 20px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+.story-intro h2 {
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 2px;
+}
+.story-item {
+  position: relative;
+  width: 82%;
+  min-height: 430px;
+  margin-bottom: 180px;
+}
+.story-photo {
   position: absolute;
-  height: 100vh;
+  width: 58%;
+  overflow: hidden;
+}
+.photo-1 {
+  height: 300px;
+}
+.story-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.story-text {
+  position: absolute;
+  top: 25%;
+  width: 32%;
+  transform: translateY(-50%);
+}
+.story-number {
+  display: block;
+  margin-bottom: 18px;
+  font-family: "Bodoni Moda", serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+.story-text p {
+  margin: 0;
+  font-family: "Shippori Mincho", serif;
+  font-size: 13px;
+  line-height: 2.2;
+  letter-spacing: 1px;
+}
+.story-left {
+  margin-left: 8%;
+}
+.story-left .story-photo {
+  left: 0;
+}
+.story-left .story-text {
+  right: 0;
+  text-align: left;
+}
+.story-right {
+  margin-left: 10%;
+}
+.story-right .story-photo {
+  right: 0;
+}
+.story-right .story-text {
+  left: 0;
+  text-align: right;
+}
+.story-right .story-text p {
+  text-align: right;
 }

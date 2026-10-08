@@ -3,9 +3,7 @@ const labels = document.querySelector(".labels");
 setTimeout(() => {
   time.classList.add("show");
 }, 1000);
-
 const start = Date.now();
-
 const counter = setInterval(() => {
   const elapsed = Date.now() - start;
   const progress = Math.min(elapsed / 4000, 1);
@@ -119,34 +117,42 @@ updateSinceBirth();
 setInterval(updateSinceBirth, 1000);
 const scrollBtn = document.querySelectorAll(".scroll-button");
 console.log(scrollBtn);
+console.log("before", window.scrollY);
+function preventScroll(e) {
+  e.preventDefault();
+}
+window.addEventListener("wheel", preventScroll, { passive: false });
+window.addEventListener("touchmove", preventScroll, { passive: false });
 scrollBtn[0].addEventListener("click", () => {
   console.log("click");
   document.querySelector(".since-birth").classList.remove("show");
-  window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  window.scrollTo({
+    top: window.scrollY + window.innerHeight,
+    behavior: "smooth",
+  });
   document.querySelector(".birth-photo").classList.add("show");
   console.log(window.scrollY);
   document.querySelector(".birth-profile").classList.add("show");
   setTimeout(() => {
     document.querySelector(".profile-info").classList.add("show");
     scrollBtn[1].classList.add("show");
+    console.log("after", window.scrollY);
   }, 1200);
 });
-window.addEventListener(
-  "wheel",
-  (e) => {
-    e.preventDefault();
-  },
-  { passive: false },
-);
-window.addEventListener(
-  "touchmove",
-  (e) => {
-    e.preventDefault();
-  },
-  { passive: false },
-);
+const birthStory = document.querySelector(".birth-story");
 scrollBtn[1].addEventListener("click", () => {
-  scrollTo({ top: window.innerHeight, behavior: "smooth" });
-  console.log("click");
-  console.log(window.scrollY);
+  window.removeEventListener("wheel", preventScroll);
+  window.removeEventListener("touchmove", preventScroll);
+  scrollTo({
+    top: birthStory.offsetTop,
+    behavior: "smooth",
+  });
+  setTimeout(() => {
+    console.log("after", window.scrollY);
+  }, 1000);
+});
+window.addEventListener("", () => {
+  if (window.scrollY < birthStory.offsetTop) {
+    window.scrollTo({ top: birthStory.offsetTop });
+  }
 });
