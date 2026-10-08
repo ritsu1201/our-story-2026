@@ -348,8 +348,9 @@ body.bright {
 }
 .name-en {
   margin-top: 8px;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Allura", cursive;
   font-size: 15px;
+  font-weight: 300;
   letter-spacing: 5px;
 }
 .profile-info h2 {
