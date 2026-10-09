@@ -127,6 +127,7 @@ window.addEventListener("touchmove", preventScroll, { passive: false });
 scrollBtn[0].addEventListener("click", () => {
   console.log("click");
   document.querySelector(".since-birth").classList.remove("show");
+  document.querySelector(".welcome").classList.add("fade-out");
   // 今表示されている画面高さ＋表示画面分スクロール
   window.scrollTo({
     top: window.scrollY + window.innerHeight,
@@ -154,7 +155,7 @@ scrollBtn[1].addEventListener("click", () => {
   });
   setTimeout(() => {
     console.log("after", window.scrollY);
-   // ２個目のボタンを押されたという条件を乗せるため、scrollBtn[1]をクリックで値変更
+    // ２個目のボタンを押されたという条件を乗せるため、scrollBtn[1]をクリックで値変更
     scrollLocked = true;
   }, 1000);
 });
