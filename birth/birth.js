@@ -1,5 +1,6 @@
 const time = document.querySelector(".time");
 const labels = document.querySelector(".labels");
+// 導入部分のカウントダウン
 setTimeout(() => {
   time.classList.add("show");
 }, 1000);
@@ -7,20 +8,16 @@ const start = Date.now();
 const counter = setInterval(() => {
   const elapsed = Date.now() - start;
   const progress = Math.min(elapsed / 4000, 1);
-
   const totalSeconds = Math.floor(5 * 60 * 60 + 52 * 60 * progress);
-
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
-
   time.textContent =
     hours.toString().padStart(2, "0") +
     " : " +
     minutes.toString().padStart(2, "0") +
     " : " +
     seconds.toString().padStart(2, "0");
-
   if (progress === 1) {
     clearInterval(counter);
     labels.classList.add("show");
@@ -53,6 +50,7 @@ const counter = setInterval(() => {
                 setTimeout(() => {
                   document.querySelector(".birth-photo").classList.add("show");
                   setTimeout(() => {
+                    // リアルタイムで文字を書き込む
                     const line1 = document.querySelector(".welcome-line1");
                     const line2 = document.querySelector(".welcome-line2");
                     const text1 = "Welcome";
@@ -96,6 +94,7 @@ const counter = setInterval(() => {
     }, 1000);
   }
 });
+// 生まれてからの時間表示
 const birthDate = new Date("2026-09-15T05:52:00");
 const daysNumber = document.querySelector(".days-number");
 const hoursNumber = document.querySelector(".hours-number");
@@ -118,14 +117,17 @@ setInterval(updateSinceBirth, 1000);
 const scrollBtn = document.querySelectorAll(".scroll-button");
 console.log(scrollBtn);
 console.log("before", window.scrollY);
+// 元の操作を止める関数
 function preventScroll(e) {
   e.preventDefault();
 }
+// scrollを制御
 window.addEventListener("wheel", preventScroll, { passive: false });
 window.addEventListener("touchmove", preventScroll, { passive: false });
 scrollBtn[0].addEventListener("click", () => {
   console.log("click");
   document.querySelector(".since-birth").classList.remove("show");
+  // 今表示されている画面高さ＋表示画面分スクロール
   window.scrollTo({
     top: window.scrollY + window.innerHeight,
     behavior: "smooth",
@@ -139,8 +141,11 @@ scrollBtn[0].addEventListener("click", () => {
     console.log("after", window.scrollY);
   }, 1200);
 });
+// birth-story移動後のscroll動作を制限するための変数
+let scrollLocked = false;
 const birthStory = document.querySelector(".birth-story");
 scrollBtn[1].addEventListener("click", () => {
+  // scroll制限の解除
   window.removeEventListener("wheel", preventScroll);
   window.removeEventListener("touchmove", preventScroll);
   scrollTo({
@@ -149,10 +154,12 @@ scrollBtn[1].addEventListener("click", () => {
   });
   setTimeout(() => {
     console.log("after", window.scrollY);
+   // ２個目のボタンを押されたという条件を乗せるため、scrollBtn[1]をクリックで値変更
+    scrollLocked = true;
   }, 1000);
 });
-window.addEventListener("", () => {
-  if (window.scrollY < birthStory.offsetTop) {
+window.addEventListener("scroll", () => {
+  if (scrollLocked === true && window.scrollY < birthStory.offsetTop) {
     window.scrollTo({ top: birthStory.offsetTop });
   }
 });
