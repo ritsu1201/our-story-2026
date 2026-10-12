@@ -184,8 +184,8 @@ body.bright {
   filter: brightness(1);
 }
 .welcome {
-  position: fixed;
-  top: 2%;
+  position: absolute;
+  top: 10px;
   left: 7%;
   z-index: 2;
   text-align: center;
@@ -205,10 +205,10 @@ body.bright {
   margin-top: -10px;
 }
 .since-birth {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   left: 10%;
-  bottom: -10px;
+  top: 510px;
   text-align: center;
   /* 最初は左にずらして透明 */
   opacity: 0;
@@ -511,4 +511,7 @@ body.bright {
 }
 .story-right .story-text p {
   text-align: left;
+}
+.zoom-img.expansion {
+  transform: scale(2);
 }
