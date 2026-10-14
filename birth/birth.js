@@ -1,6 +1,6 @@
 // 開発者モードの切り替え用
 // アプリ内ではなくコード変更でモード切替なのでconst
-const isDevelopment = false;
+const isDevelopment = true;
 if (isDevelopment) {
   console.log("開発者モード");
   document.body.classList.add("bright");
@@ -214,15 +214,22 @@ const modal = document.getElementById("modal");
 const imageModal = document.getElementById("image-modal");
 const modalContent = document.getElementById("modal-content");
 console.log(zoom);
+// 複数要素に対し、イベントを追加したいのでforEach
 zoom.forEach((zoom) => {
   zoom.addEventListener("click", () => {
     console.log("click");
-    imageModal.classList.add("show");
+    // クリックされた画像のsrcを取得
     const imageSrc = zoom.src;
     console.log(imageSrc);
+    // 拡大画像用のsrcに代入
     modal.src = imageSrc;
+    imageModal.classList.add("show");
+    // HTMLにtabindex="-1"を追加し、JSでフォーカス制御
+    // 画像をクリックしたタイミングでフォーカスしたいのでここに書く
+    imageModal.focus();
   });
 });
+// 拡大解除
 imageModal.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal")) {
     return;
@@ -232,8 +239,13 @@ imageModal.addEventListener("click", (e) => {
   }
   imageModal.classList.remove("show");
 });
-document.addEventListener("keydown", (e) => {
+// 画像全体でのイベント追加
+imageModal.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     imageModal.click();
   }
+});
+// サイト内で今どこにフォーカスが向いてるのかの確認
+document.addEventListener("focusin", (e) => {
+  console.log("現在のフォーカス", e.target);
 });
