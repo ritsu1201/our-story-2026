@@ -512,6 +512,39 @@ body.bright {
 .story-right .story-text p {
   text-align: left;
 }
+.last-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+}
+.last-photo {
+  width: 300px;
+  height: 400px;
+}
+.last-photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.last-number {
+  display: block;
+  margin-bottom: 18px;
+  font-family: "Bodoni Moda", serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  transform: translateY(50px);
+}
+.last-text p {
+  margin: 0;
+  font-family: "Shippori Mincho", serif;
+  font-size: 20px;
+  line-height: 2.2;
+  letter-spacing: 1px;
+  text-align: center;
+  transform: translateY(50px);
+}
 #modal {
   width: 100%;
   height: 100%;
