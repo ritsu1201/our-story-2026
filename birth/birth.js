@@ -1,6 +1,6 @@
 // 開発者モードの切り替え用
 // アプリ内ではなくコード変更でモード切替なのでconst
-const isDevelopment = true;
+const isDevelopment = false;
 if (isDevelopment) {
   console.log("開発者モード");
   document.body.classList.add("bright");
@@ -210,10 +210,30 @@ if (isDevelopment) {
   });
 }
 const zoom = document.querySelectorAll(".zoom-img");
+const modal = document.getElementById("modal");
+const imageModal = document.getElementById("image-modal");
+const modalContent = document.getElementById("modal-content");
 console.log(zoom);
 zoom.forEach((zoom) => {
   zoom.addEventListener("click", () => {
     console.log("click");
-    zoom.classList.add(".expansion");
+    imageModal.classList.add("show");
+    const imageSrc = zoom.src;
+    console.log(imageSrc);
+    modal.src = imageSrc;
   });
+});
+imageModal.addEventListener("click", (e) => {
+  if (e.target.classList.contains("modal")) {
+    return;
+  }
+  if (e.target.classList.contains("modal-content")) {
+    return;
+  }
+  imageModal.classList.remove("show");
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    imageModal.click();
+  }
 });

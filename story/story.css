@@ -3,7 +3,7 @@
   display: none;
   inset: 0;
   z-index: 1000;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.8);
 }
 .modal.active {
   display: flex;
@@ -196,7 +196,7 @@ img {
   transition:
     opacity 1.5s ease,
     transform 1.5s ease;
-  margin-top:270px;
+  margin-top: 270px;
 }
 .scroll-arrow {
   margin-top: 8px;
