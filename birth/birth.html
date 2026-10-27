@@ -211,6 +211,88 @@
           </div>
         </article>
       </section>
+      <main class="letter-page">
+        <!-- ヘッダー -->
+        <header class="letter-header">
+          <p class="eyebrow">TO OUR BELOVED SON</p>
+          <h1>A LETTER FOR YOU</h1>
+          <p class="subtitle">父と母から、あなたへ。</p>
+        </header>
+        <!-- 家族写真 -->
+        <section class="family-section">
+          <div class="family-photo">
+            <img src="../images/家族.jpg" alt="父と母と息子の家族写真" />
+          </div>
+          <p class="photo-caption">OUR LITTLE FAMILY</p>
+        </section>
+        <hr class="letter-divider" />
+        <!-- 父親からの手紙 -->
+        <section class="message-section father-section">
+          <p class="section-label">01 — FROM YOUR FATHER</p>
+          <h2>Dear my son,</h2>
+          <div class="message-content">
+            <p>生まれてきてくれて、本当にありがとう。</p>
+            <p>
+              君が生まれてきてくれた日、<br />
+              人生をかけて守っていこうと思った。<br />
+              勉強も頑張ろうって思ったよ。
+            </p>
+            <p>
+              これから君がどんな人に成長していくのか、<br />
+              どんな景色を見て、どんな人生を歩むのか。
+            </p>
+            <p>そのすべてを、近くで見守っていきたいと思ってるよ。</p>
+            <p>これから一緒に、たくさんの思い出を作っていこう。</p>
+            <p class="signature">With all my love, Dad.</p>
+          </div>
+        </section>
+        <!-- 母親からの手紙 -->
+        <section class="message-section mother-section">
+          <p class="section-label">02 — FROM YOUR MOTHER</p>
+          <h2>Dear my son,</h2>
+          <div class="mother-message">
+            <!-- 編集確認メッセージ -->
+            <div class="edit-modal" id="edit-modal">
+              <div class="edit-modal-content">
+                <p>手紙を編集しますか？</p>
+                <p class="edit-modal-description">この手紙を編集できます</p>
+                <div class="edit-modal-buttons">
+                  <button type="button" id="cancel-edit-btn">キャンセル</button>
+                  <button type="button" id="confirm-edit-btn">編集する</button>
+                </div>
+              </div>
+            </div>
+            <textarea
+              class="mother-input"
+              id="mother-input"
+              placeholder="息子への手紙を入力してください"
+              type="text"
+            ></textarea>
+            <div class="mother-message-display" id="mother-message">
+              <p class="message-content mom-content" id="mother-content"></p>
+              <p class="signature mom">With all my love, Mom.</p>
+            </div>
+            <!-- 編集方法の案内 -->
+            <div class="edit-hint" id="edit-hint">
+              <span class="edit-hint-icon">✎</span>
+              <span>手紙を長押しして、いつでも編集できます</span>
+            </div>
+            <button
+              class="letter-submit"
+              type="button"
+              tabindex="-1"
+              id="mother-btn"
+            >
+              手紙を残す <span>→</span>
+            </button>
+          </div>
+        </section>
+        <!-- エンディングへの導入 -->
+        <footer class="letter-footer">
+          <p>NO MATTER WHERE LIFE TAKES YOU</p>
+          <p class="footer-message">YOU WILL ALWAYS BE LOVED.</p>
+        </footer>
+      </main>
     </main>
     <script src="birth.js"></script>
   </body>

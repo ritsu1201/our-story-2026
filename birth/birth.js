@@ -249,3 +249,24 @@ imageModal.addEventListener("keydown", (e) => {
 document.addEventListener("focusin", (e) => {
   console.log("現在のフォーカス", e.target);
 });
+const motherInput = document.getElementById("mother-input");
+const motherbtn = document.getElementById("mother-btn");
+const motherContent = document.getElementById("mother-content");
+const message = document.getElementById("mother-message");
+const editHint = document.getElementById("edit-hint");
+motherbtn.addEventListener("click", () => {
+  if (motherInput.value.trim() === "") {
+    motherInput.style.borderColor = "red";
+    alert("手紙を残して！！");
+    return;
+  }
+  motherContent.textContent = motherInput.value;
+  motherInput.style.display = "none";
+  motherbtn.classList.add("fade-out");
+  setTimeout(() => {
+    editHint.style.opacity = 1;
+  }, 800);
+  setTimeout(() => {
+    editHint.style.opacity = 0;
+  }, 3800);
+});
