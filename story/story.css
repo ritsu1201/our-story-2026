@@ -112,6 +112,9 @@ img {
   pointer-events: auto;
 }
 /* メニュ画面内の調整 */
+.menu-section {
+  padding: 20px 0 15px;
+}
 .menu-section-title {
   text-align: center;
   margin-bottom: 30px;
@@ -150,6 +153,25 @@ img {
   background-color: #faf8f5;
   z-index: 400;
   box-sizing: border-box;
+}
+/* =========================
+   MENU DOODLE
+========================= */
+
+.menu-doodle {
+  display: block;
+
+  width: 75%;
+  max-width: 180px;
+  height: auto;
+
+  margin: 30px auto 10px;
+
+  transform: scale(3);
+  transform-origin: center;
+
+  pointer-events: none;
+  user-select: none;
 }
 .year-link {
   display: block;
