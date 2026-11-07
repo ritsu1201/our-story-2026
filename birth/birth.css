@@ -1089,3 +1089,276 @@ body.bright {
   color: #8d8479;
   cursor: pointer;
 }
+/* =========================
+   ENDING SECTION
+========================= */
+
+.ending-section {
+  width: 100%;
+  padding: 130px 25px 110px;
+  box-sizing: border-box;
+  margin-top: -100px;
+
+  background: #fffdf9;
+  color: #393630;
+
+  text-align: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.ending-header {
+  margin: 0 auto 90px;
+}
+
+.ending-label {
+  margin-bottom: 35px;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+
+  color: #a18f78;
+}
+
+.ending-header h2 {
+  margin: 0;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(35px, 7vw, 55px);
+  font-weight: 400;
+
+  line-height: 1.35;
+  letter-spacing: 5px;
+
+  color: #393630;
+}
+
+.ending-subtitle {
+  margin-top: 28px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-style: italic;
+  letter-spacing: 1px;
+
+  color: #8e8274;
+}
+
+.ending-japanese {
+  margin-top: 20px;
+
+  font-family: "Shippori Mincho", serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+
+  color: #999087;
+}
+
+/* =========================
+   FAMILY PHOTO
+========================= */
+
+.ending-photo-wrapper {
+  width: 100%;
+  max-width: 580px;
+
+  margin: 0 auto;
+}
+
+.ending-photo-frame {
+  width: 100%;
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e5ded4;
+  background: #fff;
+
+  box-shadow: 0 15px 45px rgba(50, 40, 30, 0.07);
+}
+
+.ending-photo {
+  display: block;
+border-radius: 6px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.ending-photo-number {
+  margin-top: 35px;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+
+  color: #aa9985;
+}
+
+.ending-photo-title {
+  margin-top: 15px;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(21px, 4vw, 28px);
+  font-weight: 400;
+
+  letter-spacing: 4px;
+
+  color: #514c44;
+}
+
+.ending-photo-caption {
+  margin-top: 12px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-style: italic;
+
+  color: #a49a8e;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.ending-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  width: 100%;
+  max-width: 250px;
+
+  margin: 110px auto;
+}
+
+.ending-divider span:not(.ending-divider-symbol) {
+  width: 70px;
+  height: 1px;
+
+  background: #dcd3c8;
+}
+
+.ending-divider-symbol {
+  font-size: 15px;
+  color: #b8a58e;
+}
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.ending-message {
+  margin: 0 auto;
+}
+
+.ending-message-top {
+  margin-bottom: 35px;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+
+  color: #a18f78;
+}
+
+.ending-message h2 {
+  margin: 0;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(30px, 6vw, 47px);
+  font-weight: 400;
+
+  line-height: 1.55;
+  letter-spacing: 4px;
+
+  color: #393630;
+}
+
+.ending-message h2 span {
+  color: #a58d76;
+}
+
+.ending-message-japanese {
+  margin-top: 35px;
+
+  font-family: "Shippori Mincho", serif;
+  font-size: 13px;
+
+  line-height: 2.5;
+  letter-spacing: 2px;
+
+  color: #898076;
+}
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.ending-signature {
+  margin-top: 100px;
+}
+
+.ending-signature p {
+  font-family: "Bodoni Moda", serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+
+  color: #a18f78;
+}
+
+.ending-signature span {
+  display: block;
+
+  margin-top: 15px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-style: italic;
+
+  color: #514c44;
+}
+
+.ending-signature small {
+  display: block;
+
+  margin-top: 18px;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+
+  color: #b2a89b;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .ending-section {
+    padding: 100px 25px 85px;
+  }
+
+  .ending-header {
+    margin-bottom: 70px;
+  }
+
+  .ending-photo-frame {
+    padding: 7px;
+  }
+
+  .ending-divider {
+    margin: 85px auto;
+  }
+
+  .ending-signature {
+    margin-top: 80px;
+  }
+}

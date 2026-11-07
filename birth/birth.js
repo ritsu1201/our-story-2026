@@ -1,6 +1,6 @@
 // 開発者モードの切り替え用
 // アプリ内ではなくコード変更でモード切替なのでconst
-const isDevelopment = true;
+const isDevelopment = false;
 if (isDevelopment) {
   console.log("開発者モード");
   document.body.classList.add("bright");
@@ -131,7 +131,7 @@ if (isDevelopment) {
                       }, 3000);
                     }, 1500);
                   }, 800);
-                }, 4000);
+                }, 1500);
               }, 750);
             }, 1800);
           }, 2000);
@@ -276,6 +276,8 @@ motherbtn.addEventListener("click", () => {
     return;
   }
   motherContent.textContent = motherInput.value;
+  save(motherInput.value);
+
   motherInput.value = "";
   motherInput.style.display = "none";
   motherbtn.classList.add("fade-out");
@@ -317,6 +319,7 @@ closeActionBtn.addEventListener("click", () => {
 confirmDeleteBtn.addEventListener("click", () => {
   motherContent.textContent = "";
   motherInput.value = "";
+  localStorage.removeItem("savedate");
   letterDeleteModal.classList.remove("show");
   motherInput.style.display = "block";
   motherBtn.classList.remove("fade-out");
@@ -325,3 +328,14 @@ confirmDeleteBtn.addEventListener("click", () => {
 cancelDeleteBtn.addEventListener("click", () => {
   letterDeleteModal.classList.remove("show");
 });
+function save(data) {
+  localStorage.setItem("savedate", JSON.stringify(data));
+}
+const saveData = localStorage.getItem("savedate");
+if (saveData) {
+  const presedDate = JSON.parse(saveData);
+  motherContent.textContent = presedDate;
+  // 入力欄と保存ボタンを非表示
+  motherInput.style.display = "none";
+  motherBtn.classList.add("fade-out");
+}
