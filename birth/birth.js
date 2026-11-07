@@ -254,13 +254,29 @@ const motherbtn = document.getElementById("mother-btn");
 const motherContent = document.getElementById("mother-content");
 const message = document.getElementById("mother-message");
 const editHint = document.getElementById("edit-hint");
+const motherMessage = document.querySelector(".mother-message");
+const motherBtn = document.getElementById("mother-btn");
+
+// 操作メニュー
+const letterActionModal = document.getElementById("letter-action-modal");
+const editLetterBtn = document.getElementById("edit-letter-btn");
+const deleteLetterBtn = document.getElementById("delete-letter-btn");
+const closeActionBtn = document.getElementById("close-action-btn");
+
+// 削除確認画面
+const letterDeleteModal = document.getElementById("letter-delete-modal");
+const confirmDeleteBtn = document.getElementById("confirm-delete-btn");
+const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
+
+// 編集キャンセル
+const cancelLetterEditBtn = document.getElementById("cancel-letter-edit-btn");
 motherbtn.addEventListener("click", () => {
   if (motherInput.value.trim() === "") {
-    motherInput.style.borderColor = "red";
     alert("手紙を残して！！");
     return;
   }
   motherContent.textContent = motherInput.value;
+  motherInput.value = "";
   motherInput.style.display = "none";
   motherbtn.classList.add("fade-out");
   setTimeout(() => {
@@ -268,5 +284,44 @@ motherbtn.addEventListener("click", () => {
   }, 800);
   setTimeout(() => {
     editHint.style.opacity = 0;
-  }, 3800);
+  }, 5800);
+});
+
+// message.addEventListener("click", () => {
+//   letterActionModal.classList.add("show");
+// });
+// タイマー識別IDを受け取るために変数
+let pressTimer;
+message.addEventListener("touchstart", () => {
+  pressTimer = setTimeout(() => {
+    letterActionModal.classList.add("show");
+  }, 800);
+});
+message.addEventListener("touchend", () => {
+  clearTimeout(pressTimer);
+});
+editLetterBtn.addEventListener("click", () => {
+  letterActionModal.classList.remove("show");
+  motherInput.style.display = "block";
+  motherBtn.classList.remove("fade-out");
+  motherInput.value = motherContent.textContent;
+  motherInput.focus();
+});
+deleteLetterBtn.addEventListener("click", () => {
+  letterDeleteModal.classList.add("show");
+  letterActionModal.classList.remove("show");
+});
+closeActionBtn.addEventListener("click", () => {
+  letterActionModal.classList.remove("show");
+});
+confirmDeleteBtn.addEventListener("click", () => {
+  motherContent.textContent = "";
+  motherInput.value = "";
+  letterDeleteModal.classList.remove("show");
+  motherInput.style.display = "block";
+  motherBtn.classList.remove("fade-out");
+  motherInput.focus();
+});
+cancelDeleteBtn.addEventListener("click", () => {
+  letterDeleteModal.classList.remove("show");
 });

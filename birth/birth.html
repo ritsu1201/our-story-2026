@@ -250,33 +250,33 @@
         <section class="message-section mother-section">
           <p class="section-label">02 — FROM YOUR MOTHER</p>
           <h2>Dear my son,</h2>
+
+          <!-- 編集方法の案内 -->
+          <div class="edit-hint" id="edit-hint">
+            <span class="edit-hint-icon">✎</span>
+            <span>手紙を長押しして、いつでも編集できます</span>
+          </div>
+
           <div class="mother-message">
-            <!-- 編集確認メッセージ -->
-            <div class="edit-modal" id="edit-modal">
-              <div class="edit-modal-content">
-                <p>手紙を編集しますか？</p>
-                <p class="edit-modal-description">この手紙を編集できます</p>
-                <div class="edit-modal-buttons">
-                  <button type="button" id="cancel-edit-btn">キャンセル</button>
-                  <button type="button" id="confirm-edit-btn">編集する</button>
-                </div>
-              </div>
-            </div>
             <textarea
               class="mother-input"
               id="mother-input"
               placeholder="息子への手紙を入力してください"
               type="text"
             ></textarea>
+
             <div class="mother-message-display" id="mother-message">
               <p class="message-content mom-content" id="mother-content"></p>
               <p class="signature mom">With all my love, Mom.</p>
             </div>
-            <!-- 編集方法の案内 -->
-            <div class="edit-hint" id="edit-hint">
-              <span class="edit-hint-icon">✎</span>
-              <span>手紙を長押しして、いつでも編集できます</span>
-            </div>
+            <button
+              type="button"
+              class="letter-edit-cancel"
+              id="cancel-letter-edit-btn"
+              tabindex="-1"
+            >
+              CANCEL
+            </button>
             <button
               class="letter-submit"
               type="button"
@@ -285,6 +285,60 @@
             >
               手紙を残す <span>→</span>
             </button>
+          </div>
+          <!-- 手紙の操作メニュー -->
+          <div class="letter-modal" id="letter-action-modal">
+            <div class="letter-modal-card">
+              <p class="letter-modal-label">LETTER OPTIONS</p>
+
+              <h3>この手紙をどうしますか？</h3>
+
+              <div class="letter-modal-divider"></div>
+
+              <button type="button" id="edit-letter-btn">
+                <span>01</span>
+                EDIT
+                <span class="modal-arrow">→</span>
+              </button>
+
+              <button type="button" id="delete-letter-btn">
+                <span>02</span>
+                DELETE
+                <span class="modal-arrow">→</span>
+              </button>
+
+              <button type="button" id="close-action-btn" class="modal-cancel">
+                CANCEL
+              </button>
+            </div>
+          </div>
+
+          <!-- 削除確認画面 -->
+          <div class="letter-modal" id="letter-delete-modal">
+            <div class="letter-modal-card">
+              <p class="letter-modal-label">DELETE LETTER</p>
+
+              <h3>この手紙を削除しますか？</h3>
+
+              <p class="letter-modal-description">
+                削除すると、手紙の内容は表示されなくなります。
+              </p>
+
+              <div class="letter-modal-divider"></div>
+
+              <button
+                type="button"
+                id="confirm-delete-btn"
+                class="delete-confirm"
+              >
+                DELETE
+                <span class="modal-arrow">→</span>
+              </button>
+
+              <button type="button" id="cancel-delete-btn" class="modal-cancel">
+                CANCEL
+              </button>
+            </div>
           </div>
         </section>
         <!-- エンディングへの導入 -->
